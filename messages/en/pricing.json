@@ -1,0 +1,113 @@
+{
+  "hero": {
+    "title": "Plans for every depth of capture",
+    "subtitle": "Start free with audio and exam scribing, then scale to full visual and screen context — or talk to us about teams and enterprise.",
+    "seeTiers": "See tiers",
+    "bookDemo": "Book a demo"
+  },
+  "comparison": {
+    "title": "Current approaches",
+    "p1": "Most documentation systems capture conversation.",
+    "p2": "Few capture what is observed during the encounter.",
+    "p3": "Aurion extends documentation to the full clinical context."
+  },
+  "pilot": {
+    "body": "Initial pilot participants receive full access to Aurion during evaluation."
+  },
+  "bottomCta": {
+    "title": "Limited pilot availability",
+    "body": "We are working with a small number of clinicians to define how documentation should reflect real-world care.",
+    "apply": "Apply for Pilot"
+  },
+  "tiers": {
+    "sectionEyebrow": "Pricing Tiers",
+    "popularSeparator": "—",
+    "columns": [
+      {
+        "label": "FREE",
+        "name": "Free",
+        "price": "$0",
+        "period": "/mo",
+        "subtext": "No credit card required",
+        "description": "Audio + exam scribe. Try VISION at no cost.",
+        "features": [
+          { "text": "Audio transcription (unlimited)", "included": true },
+          { "text": "Basic SOAP structure output", "included": true },
+          { "text": "Plain text export", "included": true },
+          { "text": "Template library", "included": false },
+          { "text": "Custom template creation", "included": false },
+          { "text": "Screen capture / imaging", "included": false },
+          { "text": "Procedure documentation", "included": false }
+        ],
+        "cta": "Get started free",
+        "href": "/get-started"
+      },
+      {
+        "label": "BASIC",
+        "name": "Basic",
+        "price": "$59",
+        "period": "/mo",
+        "annualPrice": "~$49 USD",
+        "annualNote": "billed monthly",
+        "description": "Full scribe workflow with specialty templates.",
+        "sectionHeader": "Visual transcription of physical exam, radiology and other exams or reports",
+        "features": [
+          { "text": "Screen capture — X-ray, labs, EMR", "included": true },
+          { "text": "Specialty template library", "included": true },
+          { "text": "Custom template creation", "included": true },
+          { "text": "Template sharing (team)", "included": true },
+          { "text": "DOCX export", "included": true },
+          { "text": "Visit history + transcripts", "included": true },
+          { "text": "Screen capture / imaging", "included": false },
+          { "text": "Procedure documentation", "included": false }
+        ],
+        "cta": "Start Basic",
+        "href": "/start-basic"
+      },
+      {
+        "label": "PRO",
+        "name": "Pro",
+        "price": "$119",
+        "period": "/mo",
+        "annualPrice": "~$99 USD",
+        "annualNote": "billed monthly",
+        "description": "Full AURION capture — audio, video, screen & imaging.",
+        "features": [
+          { "text": "Everything in Basic", "included": true },
+          { "text": "Continuous A/V capture (SWIS)", "included": true },
+          { "text": "Interpretive mode", "included": true },
+          { "text": "Citation-anchored note output", "included": true },
+          { "text": "PHI masking (on-device)", "included": true },
+          { "text": "Visual frame tagging", "included": true },
+          { "text": "Priority support", "included": true },
+          { "text": "Procedure / operative notes", "included": false }
+        ],
+        "cta": "Start Pro",
+        "href": "/apply",
+        "highlighted": true,
+        "badge": "Most popular"
+      },
+      {
+        "label": "PRO+",
+        "name": "Pro Plus",
+        "price": "$199",
+        "period": "/mo",
+        "annualPrice": "~$165 USD",
+        "annualNote": "billed monthly",
+        "description": "Complete suite — clinic + procedural documentation.",
+        "features": [
+          { "text": "Everything in Pro", "included": true },
+          { "text": "Post-Op Mode (v1)", "included": true },
+          { "text": "Operative note generation", "included": true },
+          { "text": "Surgical milestone capture", "included": true },
+          { "text": "Voice command support", "included": true },
+          { "text": "Multi-clinician team workspace", "included": true },
+          { "text": "Dedicated onboarding", "included": true },
+          { "text": "Audit-ready compliance export", "included": true }
+        ],
+        "cta": "Contact sales",
+        "href": "/contact"
+      }
+    ]
+  }
+}

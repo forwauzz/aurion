@@ -1,0 +1,197 @@
+{
+  "hero": {
+    "eyebrow": "La référence en IA clinique",
+    "title": "Une documentation clinique pour la rencontre au complet — pas seulement la conversation.",
+    "subtitle": "Aurion capte ce qui se passe en salle : examen physique, imagerie à l’écran et dialogue — puis transforme le tout en notes structurées que vous pouvez réviser et exporter.",
+    "support": "Objets connectables, lunettes intelligentes et appareils déjà présents dans votre flux de travail. Conçu pour les journées chargées en clinique et en salle de procédure.",
+    "startFree": "Commencer gratuitement",
+    "bookDemo": "Réserver une démo",
+    "cards": {
+      "observeLabel": "Le clinicien observe",
+      "observe1": "Démarche du patient",
+      "observe2": "Test d’amplitude articulaire",
+      "observe3": "Signes physiques",
+      "screenLabel": "Capture d’écran",
+      "screen1": "IRM consultée",
+      "screen2": "Laboratoire vérifié",
+      "screen3": "Données du DME consultées",
+      "noteLabel": "Note structurée",
+      "examTitle": "Examen physique",
+      "examSample": "Démarche antalgique, amplitude 110° de flexion…",
+      "imagingTitle": "Imagerie",
+      "imagingSample": "IRM : déchirure du ménisque médial…"
+    },
+    "caption": "De l’observation à la documentation — en un seul flux"
+  },
+  "pillars": {
+    "eyebrow": "Produit",
+    "title": "Un partenaire pour la documentation tout au long de votre pratique",
+    "subtitle": "De la dictée audio à la capture visuelle et à l’écran complète — choisissez la profondeur qui correspond à votre journée.",
+    "viewPricing": "Voir les tarifs",
+    "bookDemo": "Réserver une démo",
+    "scribe": {
+      "label": "Scribe",
+      "headline": "Documentation audio et d’examen — commencez gratuitement",
+      "body": "Transcription, sortie structurée type SOAP et export en texte brut. Passez à l’offre supérieure lorsque vous avez besoin de modèles spécialisés et d’une bibliothèque complète.",
+      "bullets": [
+        "Capture audio",
+        "Structure SOAP de base",
+        "Export en texte brut",
+        "Essai des fonctions vision sans frais sur l’offre gratuite"
+      ]
+    },
+    "vision": {
+      "label": "Vision",
+      "headline": "Capture de la rencontre au complet — ce qui a été vu et revu",
+      "body": "Audio et vidéo continus, contexte écran et imagerie, ébauches avec références, et exports adaptés à votre travail en clinique.",
+      "bullets": [
+        "Capture d’écran — imagerie, laboratoire, DME",
+        "Modèles spécialisés et partage",
+        "Export DOCX, historique des visites",
+        "Support prioritaire"
+      ]
+    },
+    "suite": {
+      "label": "Suite",
+      "headline": "Clinique et documentation procédurale",
+      "body": "Pour les équipes qui ont besoin de flux opératoires, de jalons, de commandes vocales et d’exports prêts pour audit — nous cadrons le périmètre avec vous avant le déploiement.",
+      "bullets": [
+        "Notes post-opératoires et opératoires (feuille de route)",
+        "Espace multi-cliniciens",
+        "Onboarding dédié",
+        "Contacter les ventes pour le périmètre"
+      ]
+    }
+  },
+  "specialtiesStrip": {
+    "eyebrow": "Où Aurion s’intègre",
+    "labels": [
+      "Orthopédie",
+      "Chirurgie plastique",
+      "Médecine musculosquelettique",
+      "Médecine sportive",
+      "Flux en clinique",
+      "Environnements procéduraux"
+    ]
+  },
+  "reality": {
+    "documentedEyebrow": "Ce qui est documenté aujourd’hui",
+    "documented": [
+      "Les conversations sont captées",
+      "Les observations sont reconstituées après coup",
+      "L’imagerie est décrite de mémoire",
+      "Le dossier est reconstitué a posteriori"
+    ],
+    "happensEyebrow": "Ce qui se passe réellement",
+    "happens": [
+      "Le patient est observé",
+      "Le mouvement est évalué",
+      "L’imagerie est revue en temps réel",
+      "Les décisions cliniques s’appuient sur ce qui est vu"
+    ],
+    "bottomLine": "Le dossier reflète rarement la rencontre."
+  },
+  "tension": {
+    "statement": "Dans les spécialités où l’examen est visuel, les éléments les plus importants ne sont souvent pas dits à voix haute.",
+    "examples": [
+      "On observe la démarche du patient",
+      "On mesure l’amplitude articulaire",
+      "On évalue les tissus et les structures"
+    ],
+    "closing": "Ces détails éclairent les décisions — mais ne sont pas captés de façon uniforme."
+  },
+  "productFlow": {
+    "eyebrow": "Fonctionnement",
+    "steps": [
+      { "title": "Débuter la rencontre", "description": "Lancez l’enregistrement en une action" },
+      { "title": "Prodiguer les soins habituellement", "description": "Concentrez-vous entièrement sur le patient" },
+      { "title": "Réviser la note", "description": "Voyez ce qui a été capté automatiquement" },
+      { "title": "Finaliser la documentation", "description": "Approuvez ou ajustez au besoin" }
+    ]
+  },
+  "devices": {
+    "eyebrow": "Capture",
+    "title": "Une documentation qui vous suit partout où se déroule le soin",
+    "subtitle": "Unités de soins, cliniques, salles de procédure et couloirs bruyants — utilisez les montures, lunettes et supports que vous transportez déjà. Aurion orchestre la capture selon l’appareil adapté au moment.",
+    "items": ["Lunettes intelligentes", "Objets connectables", "Caméras corporelles", "Caméras de salle"]
+  },
+  "stats": {
+    "eyebrow": "Pourquoi les équipes vont au-delà des scribes audio seuls",
+    "items": [
+      {
+        "title": "Capture passive",
+        "subtitle": "Restez avec le patient — sans invite ni étiquetage manuel pendant la visite."
+      },
+      {
+        "title": "Multimodal par conception",
+        "subtitle": "Audio, point de vue clinicien et contexte écran dans un même flux documentaire."
+      },
+      {
+        "title": "Adapté à la spécialité",
+        "subtitle": "Modèles et exports qui reflètent la documentation des examens visuels."
+      }
+    ]
+  },
+  "coreDifference": {
+    "title": "Ancré dans la rencontre",
+    "lead": "Chaque partie de la note correspond à ce qui s’est produit pendant la visite.",
+    "bullets": [
+      "Lié à ce qui a été dit",
+      "Lié à ce qui a été observé",
+      "Lié à ce qui a été revu"
+    ],
+    "line1": "La note n’est pas reconstituée.",
+    "line2": "Elle est dérivée de la rencontre."
+  },
+  "presence": {
+    "title": "Restez présent dans les moments qui comptent le plus",
+    "subtitle": "Aurion est conçu pour que la documentation suive la rencontre — et non l’inverse.",
+    "startFree": "Commencer gratuitement",
+    "comparePlans": "Comparer les forfaits"
+  },
+  "trust": {
+    "title": "Votre devoir de soins, reflété dans notre façon de construire",
+    "lead": "Aurion est positionné comme un outil de documentation. Nous alignons sécurité et traitement des données sur les exigences de votre établissement avant la mise en service.",
+    "badges": [
+      "Chiffrement en transit",
+      "Conçu pour les attentes de confidentialité en santé",
+      "Vous contrôlez l’export et les politiques de conservation",
+      "Options d’hébergement au Canada pour le déploiement"
+    ],
+    "pillars": [
+      {
+        "title": "Ancré dans la visite",
+        "body": "Les sorties sont liées à ce qui a été dit, montré et revu — la note reflète la rencontre, pas une reconstitution tardive."
+      },
+      {
+        "title": "L’humain au centre",
+        "body": "Les cliniciens révisent et approuvent la documentation avant qu’elle ne quitte Aurion. L’automatisation soutient le dossier ; elle ne remplace pas le jugement."
+      },
+      {
+        "title": "Confidentialité sans compromis",
+        "body": "Nous concevons pour des milieux où l’imagerie identifiable et le contenu à l’écran exigent une attention particulière — les détails sont abordés lors de l’onboarding."
+      }
+    ]
+  },
+  "enterprise": {
+    "eyebrow": "Cliniques et réseaux de santé",
+    "title": "Tarification volume et déploiement entreprise",
+    "body": "Pour les cliniques multi-postes et les organisations qui ont besoin d’onboarding, de gouvernance et d’exports alignés sur vos politiques — nous cadrons ensemble.",
+    "viewPricing": "Voir les tarifs",
+    "contactSales": "Contacter les ventes"
+  },
+  "audience": {
+    "title": "Conçu pour les cliniciens dont l’examen est visuel",
+    "specialties": [
+      "Chirurgie orthopédique",
+      "Chirurgie plastique",
+      "Médecine musculosquelettique"
+    ]
+  },
+  "finalCta": {
+    "title": "Ressentez la différence lorsque la documentation suit la visite.",
+    "subtitle": "Commencez avec l’offre gratuite, comparez les forfaits ou discutez avec nous du pilote et du déploiement entreprise.",
+    "startFree": "Commencer gratuitement",
+    "bookDemo": "Réserver une démo"
+  }
+}

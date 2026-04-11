@@ -1,0 +1,20 @@
+{
+  "brand": "Aurion",
+  "nav": {
+    "home": "Home",
+    "product": "Product",
+    "solutions": "Solutions",
+    "pricing": "Pricing",
+    "bookDemo": "Book a demo",
+    "startFree": "Start free"
+  },
+  "footer": {
+    "tagline": "Clinical AI documentation — grounded in the encounter.",
+    "copyright": "© {year} Aurion Clinical AI. All rights reserved.",
+    "pricing": "Pricing",
+    "product": "Product",
+    "solutions": "Solutions",
+    "bookDemo": "Book a demo",
+    "contactSales": "Contact sales"
+  }
+}

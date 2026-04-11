@@ -1,0 +1,197 @@
+{
+  "hero": {
+    "eyebrow": "The gold standard in clinical AI",
+    "title": "Clinical documentation for the full encounter — not just the conversation.",
+    "subtitle": "Aurion captures what happens in the room: physical exam, imaging on screen, and dialogue — then turns it into structured notes you can review and export.",
+    "support": "Wearables, smart glasses, and devices already in your workflow. Built for busy clinic and procedural days.",
+    "startFree": "Start free",
+    "bookDemo": "Book a demo",
+    "cards": {
+      "observeLabel": "Clinician observes",
+      "observe1": "Patient gait pattern",
+      "observe2": "Range of motion test",
+      "observe3": "Physical findings",
+      "screenLabel": "Screen capture",
+      "screen1": "MRI reviewed",
+      "screen2": "Lab values checked",
+      "screen3": "EMR data accessed",
+      "noteLabel": "Structured note",
+      "examTitle": "Physical exam",
+      "examSample": "Antalgic gait, ROM 110° flexion…",
+      "imagingTitle": "Imaging",
+      "imagingSample": "MRI: medial meniscus tear…"
+    },
+    "caption": "From observation to documentation — in one flow"
+  },
+  "pillars": {
+    "eyebrow": "Product",
+    "title": "One partner for documentation across how you work",
+    "subtitle": "From audio-first scribing to full visual and screen context — pick the depth that matches your day.",
+    "viewPricing": "View pricing",
+    "bookDemo": "Book a demo",
+    "scribe": {
+      "label": "Scribe",
+      "headline": "Audio and exam documentation — start free",
+      "body": "Transcription, SOAP-structured output, and plain text export. Move up when you need specialty templates and a full template library.",
+      "bullets": [
+        "Audio capture",
+        "Basic SOAP structure",
+        "Plain text export",
+        "Try vision features at no cost on Free"
+      ]
+    },
+    "vision": {
+      "label": "Vision",
+      "headline": "Full encounter capture — what was seen and reviewed",
+      "body": "Continuous audio and video, screen and imaging context, citation-aware drafts, and exports that match how you work in clinic.",
+      "bullets": [
+        "Screen capture — imaging, labs, EMR",
+        "Specialty templates and sharing",
+        "DOCX export, visit history",
+        "Priority support"
+      ]
+    },
+    "suite": {
+      "label": "Suite",
+      "headline": "Clinic plus procedural documentation",
+      "body": "For teams that need operative workflows, milestones, voice commands, and audit-ready exports — we'll align scope with you before rollout.",
+      "bullets": [
+        "Post-op and operative note workflows (roadmap)",
+        "Multi-clinician workspace",
+        "Dedicated onboarding",
+        "Contact sales to scope"
+      ]
+    }
+  },
+  "specialtiesStrip": {
+    "eyebrow": "Where Aurion fits",
+    "labels": [
+      "Orthopedics",
+      "Plastic surgery",
+      "Musculoskeletal medicine",
+      "Sports medicine",
+      "Clinic workflows",
+      "Procedural settings"
+    ]
+  },
+  "reality": {
+    "documentedEyebrow": "What is documented today",
+    "documented": [
+      "Conversations are captured",
+      "Observations are recalled later",
+      "Imaging is described from memory",
+      "The record is reconstructed after the fact"
+    ],
+    "happensEyebrow": "What actually happens",
+    "happens": [
+      "The patient is observed",
+      "Movement is assessed",
+      "Imaging is reviewed in real time",
+      "Clinical decisions are made from what is seen"
+    ],
+    "bottomLine": "The record rarely reflects the encounter."
+  },
+  "tension": {
+    "statement": "In visually driven specialties, the most important parts of the exam are often not spoken.",
+    "examples": [
+      "A patient's gait is observed",
+      "Range of motion is measured",
+      "Tissue and structure are assessed"
+    ],
+    "closing": "These details inform decisions — but are not consistently captured."
+  },
+  "productFlow": {
+    "eyebrow": "How it works",
+    "steps": [
+      { "title": "Start the encounter", "description": "Begin recording with a single action" },
+      { "title": "Deliver care as usual", "description": "Focus entirely on the patient" },
+      { "title": "Review the note", "description": "See what was captured automatically" },
+      { "title": "Finalize documentation", "description": "Approve or adjust as needed" }
+    ]
+  },
+  "devices": {
+    "eyebrow": "Capture",
+    "title": "Take documentation wherever care happens",
+    "subtitle": "Wards, clinics, procedural areas, and noisy hallways — use wearables, glasses, and mounts you already carry. Aurion coordinates capture from the device that fits the moment.",
+    "items": ["Smart glasses", "Wearables", "Body cameras", "Room cameras"]
+  },
+  "stats": {
+    "eyebrow": "Why teams look beyond audio-only scribes",
+    "items": [
+      {
+        "title": "Passive capture",
+        "subtitle": "Stay with the patient — no mid-visit prompts or manual tagging."
+      },
+      {
+        "title": "Multimodal by design",
+        "subtitle": "Audio, point-of-view, and screen context in one documentation flow."
+      },
+      {
+        "title": "Specialty-aware",
+        "subtitle": "Templates and exports that reflect how visual exams are documented."
+      }
+    ]
+  },
+  "coreDifference": {
+    "title": "Grounded in the encounter",
+    "lead": "Each part of the note corresponds to something that occurred during the visit.",
+    "bullets": [
+      "Linked to what was said",
+      "Linked to what was observed",
+      "Linked to what was reviewed"
+    ],
+    "line1": "The note is not reconstructed.",
+    "line2": "It is derived from the encounter."
+  },
+  "presence": {
+    "title": "Stay present in the moments that matter most",
+    "subtitle": "Aurion is built so documentation chases the encounter — not the other way around.",
+    "startFree": "Start free",
+    "comparePlans": "Compare plans"
+  },
+  "trust": {
+    "title": "Your duty of care, reflected in how we build",
+    "lead": "Aurion is positioned as a documentation tool. We align security and data handling with your institution's requirements before go-live.",
+    "badges": [
+      "Encryption in transit",
+      "Designed for healthcare privacy expectations",
+      "You control export and retention policies",
+      "Canadian hosting options for deployment"
+    ],
+    "pillars": [
+      {
+        "title": "Grounded in the visit",
+        "body": "Outputs are tied to what was said, shown, and reviewed — so notes reflect the encounter, not a late reconstruction."
+      },
+      {
+        "title": "Human in the loop",
+        "body": "Clinicians review and approve documentation before it leaves Aurion. Automation supports the record; it does not replace judgment."
+      },
+      {
+        "title": "Privacy without shortcuts",
+        "body": "We design for environments where identifiable imagery and screen content must be handled with care — details are discussed during onboarding."
+      }
+    ]
+  },
+  "enterprise": {
+    "eyebrow": "Clinics & health systems",
+    "title": "Volume pricing and enterprise rollout",
+    "body": "For multi-seat clinics and organizations that need onboarding, governance, and export aligned to your policies — we'll scope together.",
+    "viewPricing": "View pricing",
+    "contactSales": "Contact sales"
+  },
+  "audience": {
+    "title": "Designed for clinicians where the exam is visual",
+    "specialties": [
+      "Orthopedic surgery",
+      "Plastic surgery",
+      "Musculoskeletal medicine"
+    ]
+  },
+  "finalCta": {
+    "title": "Feel the difference when documentation follows the visit.",
+    "subtitle": "Start on the free tier, compare plans, or talk to us about pilot and enterprise rollout.",
+    "startFree": "Start free",
+    "bookDemo": "Book a demo"
+  }
+}

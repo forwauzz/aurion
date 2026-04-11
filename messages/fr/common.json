@@ -1,0 +1,20 @@
+{
+  "brand": "Aurion",
+  "nav": {
+    "home": "Accueil",
+    "product": "Produit",
+    "solutions": "Solutions",
+    "pricing": "Tarifs",
+    "bookDemo": "Réserver une démo",
+    "startFree": "Commencer gratuitement"
+  },
+  "footer": {
+    "tagline": "Documentation clinique par IA — ancrée dans la rencontre.",
+    "copyright": "© {year} Aurion Clinical AI. Tous droits réservés.",
+    "pricing": "Tarifs",
+    "product": "Produit",
+    "solutions": "Solutions",
+    "bookDemo": "Réserver une démo",
+    "contactSales": "Contacter les ventes"
+  }
+}

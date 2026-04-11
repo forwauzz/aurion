@@ -1,0 +1,113 @@
+{
+  "hero": {
+    "title": "Des forfaits pour chaque niveau de capture",
+    "subtitle": "Commencez gratuitement avec la dictée audio et l’examen, puis passez à la capture visuelle et à l’écran complète — ou parlez-nous des équipes et de l’entreprise.",
+    "seeTiers": "Voir les paliers",
+    "bookDemo": "Réserver une démo"
+  },
+  "comparison": {
+    "title": "Les approches actuelles",
+    "p1": "La plupart des systèmes de documentation captent la conversation.",
+    "p2": "Peu captent ce qui est observé pendant la rencontre.",
+    "p3": "Aurion étend la documentation à tout le contexte clinique."
+  },
+  "pilot": {
+    "body": "Les premiers sites pilotes bénéficient d’un accès complet à Aurion pendant l’évaluation."
+  },
+  "bottomCta": {
+    "title": "Places de pilote limitées",
+    "body": "Nous travaillons avec un petit nombre de cliniciens pour définir comment la documentation reflète les soins réels.",
+    "apply": "Postuler au pilote"
+  },
+  "tiers": {
+    "sectionEyebrow": "Paliers tarifaires",
+    "popularSeparator": "—",
+    "columns": [
+      {
+        "label": "GRATUIT",
+        "name": "Gratuit",
+        "price": "0 $",
+        "period": "/mois",
+        "subtext": "Aucune carte de crédit requise",
+        "description": "Dictée audio + examen. Essayez VISION sans frais.",
+        "features": [
+          { "text": "Transcription audio (illimitée)", "included": true },
+          { "text": "Sortie structurée SOAP de base", "included": true },
+          { "text": "Export en texte brut", "included": true },
+          { "text": "Bibliothèque de modèles", "included": false },
+          { "text": "Création de modèles personnalisés", "included": false },
+          { "text": "Capture d’écran / imagerie", "included": false },
+          { "text": "Documentation de procédure", "included": false }
+        ],
+        "cta": "Commencer gratuitement",
+        "href": "/get-started"
+      },
+      {
+        "label": "ESSENTIEL",
+        "name": "Essentiel",
+        "price": "59 $",
+        "period": "/mois",
+        "annualPrice": "~49 $ USD",
+        "annualNote": "facturation mensuelle",
+        "description": "Flux de dictée complet avec modèles spécialisés.",
+        "sectionHeader": "Transcription visuelle de l’examen physique, de l’imagerie et d’autres examens ou comptes rendus",
+        "features": [
+          { "text": "Capture d’écran — radiographie, laboratoire, DME", "included": true },
+          { "text": "Bibliothèque de modèles spécialisés", "included": true },
+          { "text": "Création de modèles personnalisés", "included": true },
+          { "text": "Partage de modèles (équipe)", "included": true },
+          { "text": "Export DOCX", "included": true },
+          { "text": "Historique des visites + transcriptions", "included": true },
+          { "text": "Capture d’écran / imagerie", "included": false },
+          { "text": "Documentation de procédure", "included": false }
+        ],
+        "cta": "Choisir Essentiel",
+        "href": "/start-basic"
+      },
+      {
+        "label": "PRO",
+        "name": "Pro",
+        "price": "119 $",
+        "period": "/mois",
+        "annualPrice": "~99 $ USD",
+        "annualNote": "facturation mensuelle",
+        "description": "Capture AURION complète — audio, vidéo, écran et imagerie.",
+        "features": [
+          { "text": "Tout ce qui est inclus dans Essentiel", "included": true },
+          { "text": "Capture audio/vidéo continue (SWIS)", "included": true },
+          { "text": "Mode interprétatif", "included": true },
+          { "text": "Note ancrée par références", "included": true },
+          { "text": "Masquage des données sensibles (sur l’appareil)", "included": true },
+          { "text": "Étiquetage des images clés", "included": true },
+          { "text": "Support prioritaire", "included": true },
+          { "text": "Notes de procédure / opératoires", "included": false }
+        ],
+        "cta": "Choisir Pro",
+        "href": "/apply",
+        "highlighted": true,
+        "badge": "Le plus populaire"
+      },
+      {
+        "label": "PRO+",
+        "name": "Pro Plus",
+        "price": "199 $",
+        "period": "/mois",
+        "annualPrice": "~165 $ USD",
+        "annualNote": "facturation mensuelle",
+        "description": "Suite complète — clinique et documentation procédurale.",
+        "features": [
+          { "text": "Tout ce qui est inclus dans Pro", "included": true },
+          { "text": "Mode post-opératoire (v1)", "included": true },
+          { "text": "Génération de note opératoire", "included": true },
+          { "text": "Capture des jalons chirurgicaux", "included": true },
+          { "text": "Commandes vocales", "included": true },
+          { "text": "Espace équipe multi-cliniciens", "included": true },
+          { "text": "Onboarding dédié", "included": true },
+          { "text": "Export conformité prêt pour audit", "included": true }
+        ],
+        "cta": "Contacter les ventes",
+        "href": "/contact"
+      }
+    ]
+  }
+}
