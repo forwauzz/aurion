@@ -1,30 +1,35 @@
 import { getTranslations } from "next-intl/server"
 
+import { AnimateIn } from "@/components/animate-in"
+
 export async function TensionSection() {
   const t = await getTranslations("home")
   const examples = t.raw("tension.examples") as string[]
 
   return (
-    <section className="px-6 py-40 md:py-56">
-      <div className="mx-auto max-w-[800px] text-center">
-        <div className="mx-auto mb-32 h-px w-24 bg-border/50" />
+    <section className="bg-background px-6 py-16 md:py-24">
+      <div className="mx-auto max-w-[760px] text-center">
 
-        <p className="font-serif text-2xl leading-[1.5] text-foreground md:text-3xl lg:text-[2rem] text-balance">
-          {t("tension.statement")}
-        </p>
+        <AnimateIn direction="fade" duration={900}>
+          <p className="font-serif text-[1.6rem] leading-[1.5] text-foreground md:text-[1.9rem] lg:text-[2.1rem] text-balance">
+            {t("tension.statement")}
+          </p>
+        </AnimateIn>
 
-        <div className="mt-24 space-y-5">
-          {examples.map((line) => (
-            <p
-              key={line}
-              className="text-lg leading-[1.8] text-muted-foreground/70"
-            >
-              {line}
-            </p>
-          ))}
-        </div>
+        <AnimateIn direction="up" delay={150} duration={800}>
+          <div className="mx-auto mt-10 h-px w-10 bg-accent opacity-60" />
+          <div className="mt-10 space-y-4">
+            {examples.map((line) => (
+              <p key={line} className="text-[15px] leading-[1.8] text-muted-foreground/65">
+                {line}
+              </p>
+            ))}
+          </div>
+          <p className="mt-10 text-base font-medium text-foreground/70">
+            {t("tension.closing")}
+          </p>
+        </AnimateIn>
 
-        <p className="mt-24 text-lg text-foreground/70">{t("tension.closing")}</p>
       </div>
     </section>
   )
