@@ -59,6 +59,49 @@
       "cta": "Rejoindre la liste d’attente"
     }
   },
+  "visualCapture": {
+    "eyebrow": "Ce qui distingue Aurion",
+    "title": "Chaque moment cliniquement pertinent. Dans le dossier.",
+    "subtitle": "D’autres outils captent la conversation. Aurion capte la réalité clinique complète — ce que vous voyez, ce que vous examinez et ce que vous révisez. L’examen physique n’est pas reconstruit de mémoire. L’imagerie n’est pas décrite après coup. Tout est ancré dans ce qui s’est réellement passé.",
+    "pillars": [
+      {
+        "label": "Examen physique",
+        "headline": "Ce que vous observez est documenté au moment où vous l’observez.",
+        "items": [
+          "Démarche et qualité du mouvement",
+          "Amplitude articulaire — valeurs captées visuellement",
+          "Constats de palpation et évaluation tissulaire",
+          "Dimensions de plaie, perfusion, cicatrisation",
+          "Tests fonctionnels et tests spécifiques",
+          "Présentation du patient et posture"
+        ]
+      },
+      {
+        "label": "Imagerie à l’écran",
+        "headline": "L’IRM que vous révisez se retrouve dans la note.",
+        "items": [
+          "Constats IRM revus en temps réel",
+          "Comparaison radiographique documentée en direct",
+          "Constats TDM corrélés à l’examen clinique",
+          "Résumé d’imagerie sans rappel post-visite",
+          "Contenu écran capté et structuré",
+          "Citations liées au moment exact de révision"
+        ]
+      },
+      {
+        "label": "Laboratoires et diagnostics",
+        "headline": "Chaque valeur consultée — structurée automatiquement.",
+        "items": [
+          "Valeurs de labo à l’écran extraites par OCR",
+          "Signes vitaux et données de monitorage captés",
+          "ECG et résultats diagnostiques documentés",
+          "Données DME consultées pendant la visite intégrées",
+          "Sortie structurée sans saisie manuelle",
+          "Corrélation avec les sections pertinentes de la note"
+        ]
+      }
+    ]
+  },
   "specialtiesStrip": {
     "eyebrow": "Où Aurion s’intègre",
     "labels": [
