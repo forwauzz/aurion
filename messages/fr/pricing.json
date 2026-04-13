@@ -40,7 +40,7 @@
           { "text": "Documentation de procédure", "included": false }
         ],
         "cta": "Commencer gratuitement",
-        "href": "/get-started"
+        "href": "/waitlist?intent=start-free"
       },
       {
         "label": "ESSENTIEL",
@@ -62,7 +62,7 @@
           { "text": "Documentation de procédure", "included": false }
         ],
         "cta": "Choisir Essentiel",
-        "href": "/start-basic"
+        "href": "/waitlist?intent=start-basic"
       },
       {
         "label": "PRO",
@@ -83,7 +83,7 @@
           { "text": "Notes de procédure / opératoires", "included": false }
         ],
         "cta": "Choisir Pro",
-        "href": "/apply",
+        "href": "/waitlist?intent=start-pro",
         "highlighted": true,
         "badge": "Le plus populaire"
       },
@@ -106,7 +106,7 @@
           { "text": "Export conformité prêt pour audit", "included": true }
         ],
         "cta": "Contacter les ventes",
-        "href": "/contact"
+        "href": "/waitlist?intent=contact-sales"
       }
     ]
   }

@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { getTranslations } from "next-intl/server"
 
 import { Button } from "@/components/ui/button"
@@ -9,20 +8,22 @@ export async function PresenceSection() {
 
   return (
     <section className="relative overflow-hidden bg-[#0B1F3A]">
-      {/* Subtle clinician image behind dark overlay */}
-      <div className="absolute inset-0 opacity-15">
-        <Image
-          src="/clinician-glasses.jpg"
-          alt=""
-          fill
-          className="object-cover object-center"
+      {/* Autoplay looping video — imaging review, very low opacity for cinematic depth */}
+      <div className="absolute inset-0 opacity-[0.18]">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           aria-hidden
-          sizes="100vw"
-        />
+          className="h-full w-full object-cover object-center"
+        >
+          <source src="/imaging-video-1.mp4" type="video/mp4" />
+        </video>
       </div>
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(to bottom, #0B1F3A 0%, rgba(11,31,58,0.88) 100%)" }}
+        style={{ background: "linear-gradient(to bottom, #0B1F3A 0%, rgba(11,31,58,0.82) 50%, #0B1F3A 100%)" }}
       />
 
       <div className="relative z-10 mx-auto max-w-[760px] px-8 py-24 text-center md:py-32">

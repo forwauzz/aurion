@@ -2,7 +2,6 @@ import Image from "next/image"
 import { getTranslations } from "next-intl/server"
 
 import { Button } from "@/components/ui/button"
-import { SITE } from "@/lib/site"
 import { Link } from "@/i18n/navigation"
 
 export async function FinalCtaSection() {
@@ -60,7 +59,7 @@ export async function FinalCtaSection() {
             variant="outline"
             className="min-w-[200px] rounded-none border-[#F5F4F0]/30 px-8 text-[13px] tracking-wide text-[#F5F4F0] hover:bg-[#F5F4F0]/10 hover:border-[#F5F4F0]/50 transition-all"
           >
-            <a href={SITE.bookDemoMailto}>{t("finalCta.bookDemo")}</a>
+            <Link href="/waitlist">{t("finalCta.bookDemo")}</Link>
           </Button>
         </div>
       </div>

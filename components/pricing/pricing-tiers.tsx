@@ -11,48 +11,48 @@ export async function PricingTiers() {
   const popularSep = t("tiers.popularSeparator")
 
   return (
-    <section id="tiers" className="px-6 py-16 md:py-24 scroll-mt-28">
+    <section id="tiers" className="px-6 py-14 md:py-22 scroll-mt-28">
       <div className="mx-auto max-w-6xl">
-        <p className="text-xs tracking-[0.3em] text-muted-foreground/60 uppercase mb-10">
+        <p className="mb-8 text-xs tracking-[0.3em] text-foreground/70 uppercase">
           {eyebrow}
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-border/60">
+        <div className="grid grid-cols-1 gap-0 overflow-hidden rounded-2xl border border-border/80 bg-card/30 shadow-sm md:grid-cols-2 lg:grid-cols-4">
           {tiers.map((tier, index) => (
             <div
               key={tier.name}
               className={`flex flex-col ${
                 index !== tiers.length - 1
-                  ? "border-b lg:border-b-0 lg:border-r border-border/60"
+                  ? "border-b border-border/70 lg:border-r lg:border-b-0"
                   : ""
-              } ${tier.highlighted ? "bg-accent/[0.03]" : ""}`}
+              } ${tier.highlighted ? "bg-accent/[0.08]" : "bg-background/70"}`}
             >
               <div
-                className={`px-5 py-6 border-b ${tier.highlighted ? "border-accent/30" : "border-border/40"}`}
+                className={`border-b px-5 py-6 ${tier.highlighted ? "border-accent/40" : "border-border/50"}`}
               >
                 <p
                   className={`text-[10px] tracking-[0.25em] uppercase mb-2 ${
-                    tier.highlighted ? "text-accent" : "text-muted-foreground/50"
+                    tier.highlighted ? "text-accent" : "text-foreground/65"
                   }`}
                 >
                   {tier.label}
                 </p>
 
                 <h3
-                  className={`font-serif text-xl ${tier.highlighted ? "text-accent" : "text-foreground"}`}
+                  className={`font-serif text-2xl ${tier.highlighted ? "text-accent" : "text-foreground"}`}
                 >
                   {tier.name}
                 </h3>
 
                 <div className="mt-2 flex items-baseline gap-1">
                   <span
-                    className={`text-2xl font-light tracking-tight ${
+                    className={`text-3xl font-medium tracking-tight ${
                       tier.highlighted ? "text-accent" : "text-foreground"
                     }`}
                   >
                     {tier.price}
                   </span>
-                  <span className="text-foreground/40 text-sm">{tier.period}</span>
+                  <span className="text-foreground/60 text-sm">{tier.period}</span>
                 </div>
 
                 {tier.annualPrice && (
@@ -62,17 +62,17 @@ export async function PricingTiers() {
                 )}
 
                 {tier.subtext && (
-                  <p className="mt-1 text-xs text-foreground/40 italic">{tier.subtext}</p>
+                  <p className="mt-1 text-xs text-foreground/55 italic">{tier.subtext}</p>
                 )}
 
-                <p className="mt-3 text-sm text-foreground/60 leading-relaxed italic">
+                <p className="mt-3 text-sm text-foreground/75 leading-relaxed italic">
                   {tier.description}
                 </p>
               </div>
 
-              <div className="flex-1 px-5 py-6 border-b border-border/40">
+              <div className="flex-1 border-b border-border/50 px-5 py-6">
                 {tier.sectionHeader && (
-                  <p className="text-sm font-medium text-foreground/80 mb-4 leading-snug">
+                  <p className="mb-4 text-sm font-medium text-foreground/90 leading-snug">
                     {tier.sectionHeader}
                   </p>
                 )}
@@ -96,7 +96,7 @@ export async function PricingTiers() {
                       )}
                       <span
                         className={
-                          feature.included ? "text-foreground/70" : "text-foreground/35"
+                          feature.included ? "text-foreground/85" : "text-foreground/45"
                         }
                       >
                         {feature.text}
@@ -114,10 +114,10 @@ export async function PricingTiers() {
                 )}
                 <Link
                   href={tier.href}
-                  className={`block w-full text-center px-4 py-2.5 text-sm tracking-wide transition-colors ${
+                  className={`block w-full rounded-md border px-4 py-2.5 text-center text-sm font-semibold tracking-wide transition-colors ${
                     tier.highlighted
-                      ? "border border-accent/50 text-accent hover:bg-accent/5"
-                      : "text-foreground/60 hover:text-foreground/80"
+                      ? "border-accent bg-accent text-accent-foreground hover:bg-accent/90"
+                      : "border-border/70 text-foreground/80 hover:bg-foreground/5 hover:text-foreground"
                   }`}
                 >
                   {tier.cta}

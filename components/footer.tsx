@@ -64,9 +64,9 @@ export async function Footer() {
           <div>
             <p className="mb-3 text-[10px] tracking-[0.2em] text-foreground/35 uppercase">Contact</p>
             <div className="flex flex-col gap-2.5 text-[13px] text-muted-foreground">
-              <a href={SITE.bookDemoMailto} className="transition-colors hover:text-foreground">
+              <Link href="/waitlist" className="transition-colors hover:text-foreground">
                 {t("footer.bookDemo")}
-              </a>
+              </Link>
               <a href={SITE.contactSalesMailto} className="transition-colors hover:text-foreground">
                 {t("footer.contactSales")}
               </a>
@@ -79,8 +79,9 @@ export async function Footer() {
         </div>
 
         <p className="mt-14 text-[11px] text-muted-foreground/40">
-          {t("footer.copyright", { year })}
+          {t("footer.copyright", { year, company: SITE.companyLegalName })}
         </p>
+
       </div>
     </footer>
   )

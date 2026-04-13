@@ -10,7 +10,7 @@
   },
   "footer": {
     "tagline": "Documentation clinique par IA — ancrée dans la rencontre.",
-    "copyright": "© {year} Aurion Clinical AI. Tous droits réservés.",
+    "copyright": "© {year} {company}. Tous droits réservés.",
     "pricing": "Tarifs",
     "product": "Produit",
     "solutions": "Solutions",

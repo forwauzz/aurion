@@ -6,26 +6,30 @@ import { AnimateIn } from "@/components/animate-in"
 /**
  * VisualCaptureSection — the signature differentiator section.
  *
- * Three clinical capture pillars: Physical Exam | Imaging on Screen | Labs & Diagnostics
- * Dark navy background, floating "captured" chips with CSS pulse animation.
- * This is the moment the site makes the case for why Aurion is not a scribe.
+ * Three capture pillars shown with purpose-built clinical photography:
+ *   Physical Exam   → exam-grid.jpeg (4-panel: gait, ROM, palpation, note output)
+ *   Imaging Review  → imaging-review-1.jpeg (doctor + MRI screen + Aurion note)
+ *   Labs & Screen   → imaging-review-2.jpeg (different angle, note detail)
  */
 
 const PILLAR_IMAGES = [
   {
-    src: "/clinician-glasses.jpg",
-    alt: "Clinician performing physical examination",
+    src: "/exam-grid.jpeg",
+    alt: "Clinic Mode — physical exam capture: gait analysis, ROM testing, palpation findings, structured note output",
     chip: "Physical exam · Captured",
+    objectPosition: "center top",
   },
   {
-    src: "/device-glasses.jpg",
-    alt: "Imaging reviewed on screen during clinical encounter",
+    src: "/imaging-review-1.jpeg",
+    alt: "Physician reviewing MRI on screen — Aurion captures imaging context in real time",
     chip: "Imaging on screen · Captured",
+    objectPosition: "center center",
   },
   {
-    src: "/doctor-patient.jpg",
-    alt: "Clinician reviewing diagnostic results with patient",
+    src: "/imaging-review-2.jpeg",
+    alt: "Physician reviewing radiology and diagnostics — Aurion note built from screen capture",
     chip: "Labs & diagnostics · Captured",
+    objectPosition: "center center",
   },
 ]
 
@@ -56,60 +60,58 @@ export async function VisualCaptureSection() {
         </AnimateIn>
 
         {/* ── Three pillars ── */}
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-3">
           {pillars.map((pillar, i) => {
             const img = PILLAR_IMAGES[i]
             return (
               <AnimateIn key={pillar.label} direction="up" delay={i * 120} duration={800}>
                 <div className="group flex flex-col">
 
-                  {/* Photo with capture chip */}
-                  <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                  {/* Photo */}
+                  <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
                     <Image
                       src={img.src}
                       alt={img.alt}
                       fill
-                      className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                      style={{ objectPosition: img.objectPosition }}
                       sizes="(max-width: 640px) 100vw, 33vw"
                     />
-                    {/* Dark overlay gradient */}
+                    {/* Gradient overlay */}
                     <div
                       className="absolute inset-0"
                       style={{
                         background:
-                          "linear-gradient(to top, rgba(11,31,58,0.85) 0%, rgba(11,31,58,0.15) 55%, transparent 100%)",
+                          "linear-gradient(to top, rgba(11,31,58,0.88) 0%, rgba(11,31,58,0.1) 50%, transparent 100%)",
                       }}
                     />
 
-                    {/* Live capture chip — top left, pulsing dot */}
-                    <div className="absolute left-4 top-4 flex items-center gap-2 border border-[#F5F4F0]/20 bg-[#0B1F3A]/75 px-3 py-1.5 backdrop-blur-sm">
-                      <span
-                        className="capture-pulse block h-1.5 w-1.5 rounded-full bg-accent"
-                        aria-hidden
-                      />
-                      <span className="text-[9px] tracking-[0.2em] text-[#F5F4F0]/80 uppercase">
+                    {/* Pulsing capture chip — top-left */}
+                    <div className="absolute left-4 top-4 flex items-center gap-2 border border-[#F5F4F0]/20 bg-[#0B1F3A]/80 px-3 py-1.5 backdrop-blur-sm">
+                      <span className="capture-pulse block h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
+                      <span className="text-[9px] tracking-[0.18em] text-[#F5F4F0]/80 uppercase">
                         {img.chip}
                       </span>
                     </div>
 
-                    {/* Pillar label at bottom of image */}
+                    {/* Pillar label — bottom of image */}
                     <div className="absolute bottom-0 left-0 right-0 p-5">
                       <p className="text-[10px] tracking-[0.25em] text-accent uppercase">
                         {pillar.label}
                       </p>
-                      <p className="mt-1.5 font-serif text-[16px] leading-snug text-[#F5F4F0]">
+                      <p className="mt-1.5 font-serif text-[15px] leading-snug text-[#F5F4F0]">
                         {pillar.headline}
                       </p>
                     </div>
                   </div>
 
-                  {/* Item list below image */}
+                  {/* Feature list below image */}
                   <div className="border border-t-0 border-[#F5F4F0]/10 bg-[#091628] px-5 py-5">
                     <ul className="space-y-2.5">
                       {pillar.items.map((item) => (
                         <li
                           key={item}
-                          className="flex items-start gap-3 text-[12px] leading-relaxed text-[#F5F4F0]/55"
+                          className="flex items-start gap-3 text-[12px] leading-relaxed text-[#F5F4F0]/50"
                         >
                           <span
                             className="mt-[0.55em] block h-1 w-1 shrink-0 rounded-full bg-accent/50"

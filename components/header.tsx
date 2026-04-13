@@ -3,7 +3,6 @@ import { getTranslations } from "next-intl/server"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/navigation"
-import { SITE } from "@/lib/site"
 
 export async function Header() {
   const t = await getTranslations("common")
@@ -66,7 +65,7 @@ export async function Header() {
             size="sm"
             className="hidden h-9 text-[13px] text-foreground/50 hover:text-foreground hover:bg-transparent lg:flex"
           >
-            <a href={SITE.bookDemoMailto}>{t("nav.bookDemo")}</a>
+            <Link href="/waitlist">{t("nav.bookDemo")}</Link>
           </Button>
 
           <LanguageSwitcher />

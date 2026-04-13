@@ -1,5 +1,6 @@
 import { AudienceSection } from "@/components/audience-section"
 import { AnimateIn } from "@/components/animate-in"
+import { ComparisonSection } from "@/components/comparison-section"
 import { CoreDifferenceSection } from "@/components/core-difference-section"
 import { DevicesSection } from "@/components/devices-section"
 import { EnterpriseSection } from "@/components/enterprise-section"
@@ -76,7 +77,12 @@ export default function Home() {
         <CoreDifferenceSection />
       </AnimateIn>
 
-      {/* ── 11. Vision / Founder — Legora-style ── */}
+      {/* ── 11. Comparison — Aurion vs audio-only scribes ── */}
+      <AnimateIn direction="up" threshold={0.06} duration={850}>
+        <ComparisonSection />
+      </AnimateIn>
+
+      {/* ── 12. Vision / Founder — Legora-style ── */}
       <AnimateIn direction="up" threshold={0.06} duration={850}>
         <VisionSection />
       </AnimateIn>

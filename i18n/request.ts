@@ -7,14 +7,16 @@ type AppMessages = {
   home: typeof import("../messages/en/home.json")
   pricing: typeof import("../messages/en/pricing.json")
   metadata: typeof import("../messages/en/metadata.json")
+  waitlist: typeof import("../messages/en/waitlist.json")
 }
 
 async function loadMessages(locale: string): Promise<AppMessages> {
-  const [common, home, pricing, metadata] = await Promise.all([
+  const [common, home, pricing, metadata, waitlist] = await Promise.all([
     import(`../messages/${locale}/common.json`),
     import(`../messages/${locale}/home.json`),
     import(`../messages/${locale}/pricing.json`),
     import(`../messages/${locale}/metadata.json`),
+    import(`../messages/${locale}/waitlist.json`),
   ])
 
   return {
@@ -22,6 +24,7 @@ async function loadMessages(locale: string): Promise<AppMessages> {
     home: home.default,
     pricing: pricing.default,
     metadata: metadata.default,
+    waitlist: waitlist.default,
   }
 }
 

@@ -5,7 +5,6 @@ import { getTranslations } from "next-intl/server"
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/navigation"
 import { Footer } from "@/components/footer"
-import { SITE } from "@/lib/site"
 
 /* ─────────────────────────────────────────────────────────────────────────── */
 /* Product page — grounded in the Technical PRD and Brand Book                */
@@ -138,7 +137,7 @@ export default async function ProductPage() {
               variant="outline"
               className="rounded-none border-[#F5F4F0]/30 px-7 text-[13px] tracking-wide text-[#F5F4F0] hover:bg-[#F5F4F0]/10 hover:border-[#F5F4F0]/50 transition-all"
             >
-              <a href={SITE.bookDemoMailto}>Book a demo</a>
+              <Link href="/waitlist">Book a demo</Link>
             </Button>
           </div>
         </div>
@@ -306,7 +305,7 @@ export default async function ProductPage() {
 
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { label: "Smart glasses", note: "Preferred · Hands-free POV", img: "/device-glasses.jpg" },
+              { label: "Smart glasses", note: "Preferred · Hands-free POV", img: "/ops-mode-capture.png" },
               { label: "Body camera", note: "Strong fallback · Clip-on", img: "/doctor-patient.jpg" },
               { label: "Wearable device", note: "Integrated capture", img: "/clinician-glasses.jpg" },
               { label: "Phone / tablet", note: "Fallback · Always available", img: "/clinical-environment.jpg" },
@@ -335,7 +334,7 @@ export default async function ProductPage() {
       {/* ── Final CTA ── */}
       <section className="relative overflow-hidden bg-[#0B1F3A]">
         <div className="absolute inset-0 opacity-20">
-          <Image src="/doctor-patient.jpg" alt="" fill className="object-cover" aria-hidden sizes="100vw" />
+          <Image src="/ops-mode-capture.png" alt="" fill className="object-cover object-center" aria-hidden sizes="100vw" />
         </div>
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #0B1F3A 45%, rgba(11,31,58,0.65) 100%)" }} />
         <div className="relative z-10 mx-auto max-w-[700px] px-6 py-20 text-center md:py-28">
@@ -348,7 +347,7 @@ export default async function ProductPage() {
               <Link href="/pricing">Start free</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="min-w-[180px] rounded-none border-[#F5F4F0]/30 px-7 text-[13px] tracking-wide text-[#F5F4F0] hover:bg-[#F5F4F0]/10">
-              <a href={SITE.bookDemoMailto}>Book a demo</a>
+              <Link href="/waitlist">Book a demo</Link>
             </Button>
           </div>
         </div>

@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { getTranslations } from "next-intl/server"
 
+import { SITE } from "@/lib/site"
+
 /**
  * Vision / Founder section — Legora-inspired two-column layout.
  * Left: label + Marie's portrait + name/title
@@ -28,7 +30,7 @@ export async function VisionSection() {
               <div className="aspect-[3/4] relative">
                 <Image
                   src="/founder-marie.jpg"
-                  alt="Dr. Marie Gdalevitch — Co-founder &amp; CEO, Aurion"
+                  alt={`Dr. Marie Gdalevitch — Co-founder & CEO, ${SITE.companyLegalName}`}
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 768px) 200px, 280px"
@@ -37,7 +39,9 @@ export async function VisionSection() {
             </div>
             <div className="mt-5">
               <p className="text-[13px] font-medium text-foreground">Dr. Marie Gdalevitch</p>
-              <p className="mt-0.5 text-[11px] text-muted-foreground/60">Co-founder &amp; CEO, Aurion</p>
+              <p className="mt-0.5 text-[11px] text-muted-foreground/60">
+                Co-founder &amp; CEO, {SITE.companyLegalName}
+              </p>
               <p className="mt-0.5 text-[11px] text-muted-foreground/45">Orthopedic Surgeon</p>
             </div>
             {/* Signature line */}

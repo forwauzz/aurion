@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "title": "Join the waitlist | Aurion",
+    "description": "Request early access — tell us your name, email, and specialty."
+  },
+  "eyebrow": "Early access",
+  "title": "Join the waitlist",
+  "subtitle": "Tell us what you want to onboard for (free access, demo, pilot, or sales) and we will follow up when capacity opens. No spam — clinical teams only.",
+  "fields": {
+    "name": "Full name",
+    "email": "Work email",
+    "specialty": "Specialty"
+  },
+  "placeholders": {
+    "name": "Dr. Jane Smith",
+    "email": "you@healthsystem.org",
+    "specialty": "e.g. Orthopedic surgery"
+  },
+  "submit": "Request access",
+  "submitting": "Sending…",
+  "success": "You are on the list. We will be in touch.",
+  "error": "Something went wrong. Please try again or email us.",
+  "validation": {
+    "required": "This field is required.",
+    "email": "Enter a valid email address."
+  },
+  "errorNotConfigured": "Signups are temporarily unavailable. Please try again later.",
+  "backHome": "Back to home"
+}

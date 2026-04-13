@@ -6,6 +6,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { Header } from "@/components/header"
 import { LocaleHtmlAttributes } from "@/components/locale-html-attributes"
 import { routing } from "@/i18n/routing"
+import { SITE } from "@/lib/site"
 
 type Props = {
   children: React.ReactNode
@@ -23,6 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
+    publisher: SITE.companyLegalName,
+    openGraph: {
+      siteName: "Aurion",
+    },
     generator: "v0.app",
     icons: {
       icon: [
@@ -55,10 +60,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages()
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <LocaleHtmlAttributes />
+    <NextIntlClientProvider messages={messages} locale={locale}>
+      <LocaleHtmlAttributes locale={locale} />
       <Header />
       {children}
     </NextIntlClientProvider>
   )
-}
+} 

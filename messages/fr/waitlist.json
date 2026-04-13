@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "title": "Rejoindre la liste d'attente | Aurion",
+    "description": "Demandez un accès anticipé — indiquez votre nom, courriel et spécialité."
+  },
+  "eyebrow": "Accès anticipé",
+  "title": "Rejoindre la liste d'attente",
+  "subtitle": "Indiquez le type d’onboarding souhaité (accès gratuit, démo, pilote ou ventes) et nous vous contacterons dès qu’une place s’ouvre. Pas de pourriel — équipes cliniques uniquement.",
+  "fields": {
+    "name": "Nom complet",
+    "email": "Courriel professionnel",
+    "specialty": "Spécialité"
+  },
+  "placeholders": {
+    "name": "Dr Jane Smith",
+    "email": "vous@etablissement.org",
+    "specialty": "p. ex. Chirurgie orthopédique"
+  },
+  "submit": "Demander l'accès",
+  "submitting": "Envoi…",
+  "success": "Vous êtes sur la liste. Nous vous contacterons.",
+  "error": "Une erreur s'est produite. Réessayez ou écrivez-nous.",
+  "validation": {
+    "required": "Ce champ est obligatoire.",
+    "email": "Entrez une adresse courriel valide."
+  },
+  "errorNotConfigured": "Les inscriptions sont temporairement indisponibles. Réessayez plus tard.",
+  "backHome": "Retour à l'accueil"
+}

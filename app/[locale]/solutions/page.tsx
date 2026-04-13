@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/navigation"
 import { Footer } from "@/components/footer"
 import { SITE } from "@/lib/site"
+import { ComparisonSection } from "@/components/comparison-section"
 
 /* ─────────────────────────────────────────────────────────────────────────── */
 /* Solutions page — specialty-specific positioning grounded in PRD            */
@@ -25,8 +26,8 @@ const SPECIALTIES = [
       "Imaging reviewed on screen — X-ray, MRI, CT correlation",
       "Specialty-specific SOAP templates for clinic visits",
     ],
-    img: "/clinician-glasses.jpg",
-    imgAlt: "Orthopedic surgeon in clinic with Aurion capture",
+    img: "/exam-grid.jpeg",
+    imgAlt: "Orthopedic physical exam — gait, ROM, palpation, and note captured by Aurion",
   },
   {
     id: "plastic-surgery",
@@ -42,8 +43,8 @@ const SPECIALTIES = [
       "Pre- and post-operative visual documentation",
       "Side-by-side imaging comparison during consultations",
     ],
-    img: "/device-glasses.jpg",
-    imgAlt: "Plastic surgeon documentation with Aurion",
+    img: "/ops-mode-capture.png",
+    imgAlt: "Plastic surgery procedural documentation — Aurion captures surgical workflow, milestones, and operative notes",
   },
   {
     id: "sports-medicine",
@@ -59,8 +60,8 @@ const SPECIALTIES = [
       "Return-to-sport and return-to-play criteria documentation",
       "Imaging and ultrasound review captured on screen",
     ],
-    img: "/doctor-patient.jpg",
-    imgAlt: "Sports medicine physician examination with Aurion",
+    img: "/imaging-review-1.jpeg",
+    imgAlt: "Sports medicine physician reviewing imaging on screen — Aurion captures the clinical context",
   },
   {
     id: "musculoskeletal",
@@ -76,8 +77,8 @@ const SPECIALTIES = [
       "Imaging and diagnostic review integration",
       "Complex multi-visit documentation with visit history",
     ],
-    img: "/clinical-environment.jpg",
-    imgAlt: "MSK medicine consultation with Aurion",
+    img: "/imaging-review-2.jpeg",
+    imgAlt: "MSK physician reviewing radiology and diagnostics — Aurion note built from screen capture",
   },
 ]
 
@@ -170,6 +171,9 @@ export default async function SolutionsPage() {
         </div>
       </section>
 
+      {/* ── Comparison table — Aurion vs audio scribes ── */}
+      <ComparisonSection />
+
       {/* ── Specialty sections ── */}
       {SPECIALTIES.map(({ id, eyebrow, headline, body, bullets, img, imgAlt }, idx) => (
         <section
@@ -201,7 +205,7 @@ export default async function SolutionsPage() {
                     <Link href="/pricing">Start free</Link>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="rounded-none border-foreground/25 px-7 text-[13px] tracking-wide hover:bg-foreground/5 transition-all">
-                    <a href={SITE.bookDemoMailto}>Book a demo</a>
+                    <Link href="/waitlist">Book a demo</Link>
                   </Button>
                 </div>
               </div>

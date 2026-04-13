@@ -10,7 +10,7 @@
   },
   "footer": {
     "tagline": "Clinical AI documentation — grounded in the encounter.",
-    "copyright": "© {year} Aurion Clinical AI. All rights reserved.",
+    "copyright": "© {year} {company}. All rights reserved.",
     "pricing": "Pricing",
     "product": "Product",
     "solutions": "Solutions",

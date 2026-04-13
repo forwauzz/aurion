@@ -3,6 +3,7 @@
     "title": "Plans for every depth of capture",
     "subtitle": "Start free with audio and exam scribing, then scale to full visual and screen context — or talk to us about teams and enterprise.",
     "seeTiers": "See tiers",
+    "talkToUs": "Talk to us",
     "bookDemo": "Book a demo"
   },
   "comparison": {
@@ -17,7 +18,8 @@
   "bottomCta": {
     "title": "Limited pilot availability",
     "body": "We are working with a small number of clinicians to define how documentation should reflect real-world care.",
-    "apply": "Apply for Pilot"
+    "apply": "Apply for Pilot",
+    "cta": "Apply for pilot access"
   },
   "tiers": {
     "sectionEyebrow": "Pricing Tiers",
@@ -40,7 +42,7 @@
           { "text": "Procedure documentation", "included": false }
         ],
         "cta": "Get started free",
-        "href": "/get-started"
+        "href": "/waitlist?intent=start-free"
       },
       {
         "label": "BASIC",
@@ -62,7 +64,7 @@
           { "text": "Procedure documentation", "included": false }
         ],
         "cta": "Start Basic",
-        "href": "/start-basic"
+        "href": "/waitlist?intent=start-basic"
       },
       {
         "label": "PRO",
@@ -83,7 +85,7 @@
           { "text": "Procedure / operative notes", "included": false }
         ],
         "cta": "Start Pro",
-        "href": "/apply",
+        "href": "/waitlist?intent=start-pro",
         "highlighted": true,
         "badge": "Most popular"
       },
@@ -106,7 +108,7 @@
           { "text": "Audit-ready compliance export", "included": true }
         ],
         "cta": "Contact sales",
-        "href": "/contact"
+        "href": "/waitlist?intent=contact-sales"
       }
     ]
   }
