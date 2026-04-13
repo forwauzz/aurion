@@ -22,6 +22,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const enableVercelAnalytics = process.env.NODE_ENV === "production" && process.env.VERCEL === "1"
+
   return (
     <html
       className={`${inter.variable} ${playfair.variable}`}
@@ -29,7 +31,7 @@ export default function RootLayout({
     >
       <body className="font-sans antialiased">
         {children}
-        {process.env.NODE_ENV === "production" && <Analytics />}
+        {enableVercelAnalytics && <Analytics />}
       </body>
     </html>
   )

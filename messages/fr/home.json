@@ -23,44 +23,40 @@
     },
     "caption": "De l’observation à la documentation — en un seul flux"
   },
-  "pillars": {
-    "eyebrow": "Produit",
-    "title": "Un partenaire pour la documentation tout au long de votre pratique",
-    "subtitle": "De la dictée audio à la capture visuelle et à l’écran complète — choisissez la profondeur qui correspond à votre journée.",
-    "viewPricing": "Voir les tarifs",
-    "bookDemo": "Réserver une démo",
-    "scribe": {
-      "label": "Scribe",
-      "headline": "Documentation audio et d’examen — commencez gratuitement",
-      "body": "Transcription, sortie structurée type SOAP et export en texte brut. Passez à l’offre supérieure lorsque vous avez besoin de modèles spécialisés et d’une bibliothèque complète.",
+  "modes": {
+    "eyebrow": "Modes produit",
+    "title": "Un assistant. Deux contextes cliniques.",
+    "subtitle": "Aurion fonctionne dans l’environnement qui correspond a votre journée — clinique externe ou bloc operatoire.",
+    "clinic": {
+      "badge": "Disponible maintenant",
+      "title": "Mode Clinique",
+      "headline": "Capture complete de la rencontre en clinique et en consultation externe.",
+      "body": "Du consentement a la note finale, Aurion capte l’audio, votre point de vue et tout ce qui est revu a l’ecran. Examen physique, imagerie et valeurs de laboratoire sont ancrés dans la note, sans reconstruction apres la visite.",
       "bullets": [
-        "Capture audio",
-        "Structure SOAP de base",
-        "Export en texte brut",
-        "Essai des fonctions vision sans frais sur l’offre gratuite"
-      ]
+        "Capture audio continue et transcription",
+        "Capture visuelle POV — demarche, amplitude, constatations d’examen, evaluation de plaie",
+        "Capture d’ecran — imagerie, laboratoire, DME consultés pendant la visite",
+        "Modeles adaptes a la specialite (orthopedie, chirurgie plastique, medecine sportive)",
+        "Revision, edition et approbation par le clinicien avant export",
+        "Suppression des medias bruts apres traitement"
+      ],
+      "cta": "Commencer gratuitement",
+      "ctaSecondary": "Réserver une démo"
     },
-    "vision": {
-      "label": "Vision",
-      "headline": "Capture de la rencontre au complet — ce qui a été vu et revu",
-      "body": "Audio et vidéo continus, contexte écran et imagerie, ébauches avec références, et exports adaptés à votre travail en clinique.",
+    "ops": {
+      "badge": "Feuille de route",
+      "title": "Mode Ops",
+      "headline": "Documentation operatoire et procedurale pour le bloc.",
+      "body": "Documentation guidee par jalons pour les flux chirurgicaux et proceduraux. Ce qui se passe en salle — pre-op, per-op, post-op — est capture et structure pour la note operatoire. Disponible d’abord pour les partenaires pilotes.",
       "bullets": [
-        "Capture d’écran — imagerie, laboratoire, DME",
-        "Modèles spécialisés et partage",
-        "Export DOCX, historique des visites",
-        "Support prioritaire"
-      ]
-    },
-    "suite": {
-      "label": "Suite",
-      "headline": "Clinique et documentation procédurale",
-      "body": "Pour les équipes qui ont besoin de flux opératoires, de jalons, de commandes vocales et d’exports prêts pour audit — nous cadrons le périmètre avec vous avant le déploiement.",
-      "bullets": [
-        "Notes post-opératoires et opératoires (feuille de route)",
-        "Espace multi-cliniciens",
-        "Onboarding dédié",
-        "Contacter les ventes pour le périmètre"
-      ]
+        "Evenements de documentation declenches par jalon",
+        "Generation de note operatoire a partir de la capture procedurale",
+        "Espace de travail multi-cliniciens",
+        "Documentation pre-op, per-op et post-op",
+        "Modeles specifiques aux procedures",
+        "Acces partenaire pilote — contactez-nous pour rejoindre la liste"
+      ],
+      "cta": "Rejoindre la liste d’attente"
     }
   },
   "specialtiesStrip": {
