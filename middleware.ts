@@ -44,6 +44,6 @@ export const config = {
     "/",
     "/(en|fr)/:path*",
     "/admin/:path*",
-    "/((?!api|_next|_vercel|admin|.*\\..*).*)",
+    "/((?!api|_next|_vercel|admin|manifest.webmanifest|apple-touch-icon|icon-16x16|icon-32x32|icon-192x192|icon-512x512|favicon.ico|.*\\..*).*)",
   ],
 }
