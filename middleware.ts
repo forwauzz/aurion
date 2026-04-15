@@ -11,6 +11,39 @@ const intlMiddleware = createMiddleware(routing)
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+  const siteUsername = process.env.SITE_LOCK_USERNAME
+  const sitePassword = process.env.SITE_LOCK_PASSWORD
+
+  if (siteUsername && sitePassword) {
+    const authHeader = request.headers.get("authorization")
+    if (!authHeader?.startsWith("Basic ")) {
+      return new NextResponse("Authentication required.", {
+        status: 401,
+        headers: { "WWW-Authenticate": 'Basic realm="Site Access"' },
+      })
+    }
+
+    const encoded = authHeader.slice("Basic ".length)
+    let decoded = ""
+    try {
+      decoded = atob(encoded)
+    } catch {
+      return new NextResponse("Invalid credentials.", {
+        status: 401,
+        headers: { "WWW-Authenticate": 'Basic realm="Site Access"' },
+      })
+    }
+    const separatorIndex = decoded.indexOf(":")
+    const username = separatorIndex >= 0 ? decoded.slice(0, separatorIndex) : ""
+    const password = separatorIndex >= 0 ? decoded.slice(separatorIndex + 1) : ""
+
+    if (username !== siteUsername || password !== sitePassword) {
+      return new NextResponse("Invalid credentials.", {
+        status: 401,
+        headers: { "WWW-Authenticate": 'Basic realm="Site Access"' },
+      })
+    }
+  }
 
   if (pathname.startsWith("/admin")) {
     if (pathname.startsWith("/admin/login")) {
