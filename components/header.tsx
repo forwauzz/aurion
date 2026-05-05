@@ -68,6 +68,15 @@ export async function Header() {
             <Link href="/waitlist">{t("nav.bookDemo")}</Link>
           </Button>
 
+          <Button
+            asChild
+            variant="ghost"
+            size="sm"
+            className="hidden h-9 text-[13px] text-foreground/50 hover:text-foreground hover:bg-transparent sm:flex"
+          >
+            <Link href="/prototype">{t("nav.login")}</Link>
+          </Button>
+
           <LanguageSwitcher />
 
           {/* Primary CTA */}
