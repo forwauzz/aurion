@@ -1,0 +1,451 @@
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `ChoiceGroup`. See https://react.dev/link/warning-keys for more information. 
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15127:29)
+    at runWithFiberInDEV (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at warnForMissingKey (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15126:17)
+    at warnOnInvalidKey (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4091:21)
+    at reconcileChildrenArray (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4129:160)
+    at reconcileChildFibersImpl (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4236:51)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4261:39)
+    at reconcileChildren (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:5898:51)
+    at beginWork (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6758:1573)
+    at runWithFiberInDEV (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:186)
+    at performSyncWorkOnRoot (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10179:316)
+    at processRootScheduleInMicrotask (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10200:106)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10274:158) (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15127:29)
+[browser] Uncaught ReferenceError: SelectField is not defined
+    at NewVisitView (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/components_prototype_prototype-app_tsx_0y307u8._.js?id=%255Bproject%255D%252Fcomponents%252Fprototype%252Fprototype-app.tsx+%255Bapp-client%255D+%2528ecmascript%2529:1329:232)
+    at Object.react_stack_bottom_frame (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15037:24)
+    at renderWithHooks (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4620:24)
+    at updateFunctionComponent (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6081:21)
+    at beginWork (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9098:47)
+    at performSyncWorkOnRoot (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10179:316)
+    at flushSyncWork$1 (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9230:86)
+    at Object.scheduleRefresh (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:299:13)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:391:33)
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:384:38)
+    at applyUpdate (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:878:31)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:886:13)
+    at PrototypeApp (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/components_prototype_prototype-app_tsx_0y307u8._.js?id=%255Bproject%255D%252Fcomponents%252Fprototype%252Fprototype-app.tsx+%255Bapp-client%255D+%2528ecmascript%2529:850:260)
+    at PrototypePage (app\[locale]\prototype\page.tsx:20:10)
+  18 |   setRequestLocale(locale)
+  19 |
+> 20 |   return <PrototypeApp locale={locale as AppLocale} />
+     |          ^
+  21 | }
+  22 |
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[browser] Uncaught ReferenceError: Video is not defined
+    at CaptureView (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/components_prototype_prototype-app_tsx_0y307u8._.js?id=%255Bproject%255D%252Fcomponents%252Fprototype%252Fprototype-app.tsx+%255Bapp-client%255D+%2528ecmascript%2529:1620:39)
+    at Object.react_stack_bottom_frame (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15037:24)
+    at renderWithHooks (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4620:24)
+    at updateFunctionComponent (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6081:21)
+    at beginWork (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9098:47)
+    at performSyncWorkOnRoot (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10179:316)
+    at processRootScheduleInMicrotask (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10200:106)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10274:158)
+    at PrototypeApp (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/components_prototype_prototype-app_tsx_0y307u8._.js?id=%255Bproject%255D%252Fcomponents%252Fprototype%252Fprototype-app.tsx+%255Bapp-client%255D+%2528ecmascript%2529:862:259)
+    at PrototypePage (app\[locale]\prototype\page.tsx:20:10)
+  18 |   setRequestLocale(locale)
+  19 |
+> 20 |   return <PrototypeApp locale={locale as AppLocale} />
+     |          ^
+  21 | }
+  22 |
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[browser] Uncaught ReferenceError: Video is not defined
+    at CaptureView (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/components_prototype_prototype-app_tsx_0y307u8._.js:1621:39)
+    at Object.react_stack_bottom_frame (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15037:24)
+    at renderWithHooks (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4620:24)
+    at updateFunctionComponent (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6081:21)
+    at beginWork (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9098:47)
+    at performSyncWorkOnRoot (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10179:316)
+    at processRootScheduleInMicrotask (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10200:106)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10274:158)
+    at PrototypeApp (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/components_prototype_prototype-app_tsx_0y307u8._.js:863:259)
+    at PrototypePage (app\[locale]\prototype\page.tsx:20:10)
+  18 |   setRequestLocale(locale)
+  19 |
+> 20 |   return <PrototypeApp locale={locale as AppLocale} />
+     |          ^
+  21 | }
+  22 |
+⨯ ./components/prototype/prototype-app.tsx:971:17
+Expected '</', got 'jsx text'
+  [90m969 |[0m           </[33mActionButton[0m>
+  [90m970 |[0m         </div>
+[31m[1m>[0m [90m971 |[0m       </section>
+  [90m    |[0m                 [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m972 |[0m
+  [90m    |[0m [31m[1m^[0m
+[31m[1m>[0m [90m973 |[0m       <aside className=[32m"rounded-md border border-[#D4D9E1] bg-[#081D36] p-6 text-white"[0m>
+  [90m    |[0m [31m[1m^^^^^^[0m
+  [90m974 |[0m         <[33mShieldCheck[0m className=[32m"size-9 text-[#D1B464]"[0m />
+  [90m975 |[0m         <h2 className=[32m"mt-5 text-xl font-semibold"[0m>{t.capture.privacy}</h2>
+  [90m976 |[0m         <div className=[32m"mt-5 space-y-3 text-sm text-[#C7D3E2]"[0m>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx
+
+
+[browser] ./components/prototype/prototype-app.tsx:971:17
+Expected '</', got 'jsx text'
+  969 |           </ActionButton>
+  970 |         </div>
+> 971 |       </section>
+      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 972 |
+      | ^
+> 973 |       <aside className="rounded-md border border-[#D4D9E1] bg-[#081D36] p-6 text-white">
+      | ^^^^^^
+  974 |         <ShieldCheck className="size-9 text-[#D1B464]" />
+  975 |         <h2 className="mt-5 text-xl font-semibold">{t.capture.privacy}</h2>
+  976 |         <div className="mt-5 space-y-3 text-sm text-[#C7D3E2]">
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx 
+    at handleErrors (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./components/prototype/prototype-app.tsx:971:17
+Expected '</', got 'jsx text'
+  969 |           </ActionButton>
+  970 |         </div>
+> 971 |       </section>
+      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 972 |
+      | ^
+> 973 |       <aside className="rounded-md border border-[#D4D9E1] bg-[#081D36] p-6 text-white">
+      | ^^^^^^
+  974 |         <ShieldCheck className="size-9 text-[#D1B464]" />
+  975 |         <h2 className="mt-5 text-xl font-semibold">{t.capture.privacy}</h2>
+  976 |         <div className="mt-5 space-y-3 text-sm text-[#C7D3E2]">
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx 
+    at handleErrors (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./components/prototype/prototype-app.tsx:971:17
+Expected '</', got 'jsx text'
+  969 |           </ActionButton>
+  970 |         </div>
+> 971 |       </section>
+      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 972 |
+      | ^
+> 973 |       <aside className="rounded-md border border-[#D4D9E1] bg-[#081D36] p-6 text-white">
+      | ^^^^^^
+  974 |         <ShieldCheck className="size-9 text-[#D1B464]" />
+  975 |         <h2 className="mt-5 text-xl font-semibold">{t.capture.privacy}</h2>
+  976 |         <div className="mt-5 space-y-3 text-sm text-[#C7D3E2]">
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx 
+    at handleErrors (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./components/prototype/prototype-app.tsx:971:17
+Expected '</', got 'jsx text'
+  969 |           </ActionButton>
+  970 |         </div>
+> 971 |       </section>
+      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 972 |
+      | ^
+> 973 |       <aside className="rounded-md border border-[#D4D9E1] bg-[#081D36] p-6 text-white">
+      | ^^^^^^
+  974 |         <ShieldCheck className="size-9 text-[#D1B464]" />
+  975 |         <h2 className="mt-5 text-xl font-semibold">{t.capture.privacy}</h2>
+  976 |         <div className="mt-5 space-y-3 text-sm text-[#C7D3E2]">
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx 
+    at handleErrors (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] Uncaught Error: ./components/prototype/prototype-app.tsx:971:17
+Expected '</', got 'jsx text'
+  969 |           </ActionButton>
+  970 |         </div>
+> 971 |       </section>
+      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 972 |
+      | ^
+> 973 |       <aside className="rounded-md border border-[#D4D9E1] bg-[#081D36] p-6 text-white">
+      | ^^^^^^
+  974 |         <ShieldCheck className="size-9 text-[#D1B464]" />
+  975 |         <h2 className="mt-5 text-xl font-semibold">{t.capture.privacy}</h2>
+  976 |         <div className="mt-5 space-y-3 text-sm text-[#C7D3E2]">
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx
+
+
+    at <unknown> (Error: ./components/prototype/prototype-app.tsx:971:17)
+    at <unknown> (Error: (./components/prototype/prototype-app.tsx:971:17)
+[browser] ./components/prototype/prototype-app.tsx:971:17
+Expected '</', got 'jsx text'
+  969 |           </ActionButton>
+  970 |         </div>
+> 971 |       </section>
+      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 972 |
+      | ^
+> 973 |       <aside className="rounded-md border border-[#D4D9E1] bg-[#081D36] p-6 text-white">
+      | ^^^^^^
+  974 |         <ShieldCheck className="size-9 text-[#D1B464]" />
+  975 |         <h2 className="mt-5 text-xl font-semibold">{t.capture.privacy}</h2>
+  976 |         <div className="mt-5 space-y-3 text-sm text-[#C7D3E2]">
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx 
+    at handleErrors (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./components/prototype/prototype-app.tsx:971:17
+Expected '</', got 'jsx text'
+  969 |           </ActionButton>
+  970 |         </div>
+> 971 |       </section>
+      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 972 |
+      | ^
+> 973 |       <aside className="rounded-md border border-[#D4D9E1] bg-[#081D36] p-6 text-white">
+      | ^^^^^^
+  974 |         <ShieldCheck className="size-9 text-[#D1B464]" />
+  975 |         <h2 className="mt-5 text-xl font-semibold">{t.capture.privacy}</h2>
+  976 |         <div className="mt-5 space-y-3 text-sm text-[#C7D3E2]">
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx 
+    at handleErrors (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./components/prototype/prototype-app.tsx:971:17
+Expected '</', got 'jsx text'
+  969 |           </ActionButton>
+  970 |         </div>
+> 971 |       </section>
+      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 972 |
+      | ^
+> 973 |       <aside className="rounded-md border border-[#D4D9E1] bg-[#081D36] p-6 text-white">
+      | ^^^^^^
+  974 |         <ShieldCheck className="size-9 text-[#D1B464]" />
+  975 |         <h2 className="mt-5 text-xl font-semibold">{t.capture.privacy}</h2>
+  976 |         <div className="mt-5 space-y-3 text-sm text-[#C7D3E2]">
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx 
+    at handleErrors (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./components/prototype/prototype-app.tsx:955:15
+Expected '</', got 'jsx text'
+  953 |             <TranscriptLine time="05:50" text={note.transcript3} />
+  954 |           </div>
+> 955 |         </div>
+      |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 956 |
+      | ^
+> 957 |         <div className="mt-6 flex flex-wrap justify-end gap-3">
+      | ^^^^^^^^
+  958 |           <ActionButton variant="secondary" onClick={() => setPaused(!paused)}>
+  959 |             <Pause className="size-4" />
+  960 |             {t.capture.pause}
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx 
+    at handleErrors (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./components/prototype/prototype-app.tsx:949:17
+Expected '</', got 'jsx text'
+  947 |               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6...
+  948 |             {visit.patient} · {visit.visitType}
+> 949 |           </div>
+      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 950 |           <div className="mt-4 space-y-4 text-sm text-[#17243A]">
+      | ^^^^^^^^^^
+  951 |             <TranscriptLine time="00:42" text={note.transcript1} />
+  952 |             <TranscriptLine time="03:15" text={note.transcript2} />
+  953 |             <TranscriptLine time="05:50" text={note.transcript3} />
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx 
+    at handleErrors (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./components/prototype/prototype-app.tsx:949:17
+Expected '</', got 'jsx text'
+  947 |               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6...
+  948 |                 {t.capture.changes}
+> 949 |           </div>
+      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 950 |           <div className="mt-4 space-y-4 text-sm text-[#17243A]">
+      | ^^^^^^^^^^
+  951 |             <TranscriptLine time="00:42" text={note.transcript1} />
+  952 |             <TranscriptLine time="03:15" text={note.transcript2} />
+  953 |             <TranscriptLine time="05:50" text={note.transcript3} />
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx 
+    at handleErrors (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./components/prototype/prototype-app.tsx:970:17
+Expected '</', got 'jsx text'
+  968 |           </ActionButton>
+  969 |         </div>
+> 970 |       </section>
+      |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 971 |
+      | ^
+> 972 |       <aside className="rounded-md border border-[#D4D9E1] bg-[#081D36] p-6 text-white">
+      | ^^^^^^
+  973 |         <ShieldCheck className="size-9 text-[#D1B464]" />
+  974 |         <h2 className="mt-5 text-xl font-semibold">{t.capture.privacy}</h2>
+  975 |         <div className="mt-5 space-y-3 text-sm text-[#C7D3E2]">
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/prototype/prototype-app.tsx
+    ./app/[locale]/prototype/page.tsx 
+    at handleErrors (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] Uncaught ReferenceError: onStop is not defined
+    at CaptureView (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/components_prototype_prototype-app_tsx_0y307u8._.js?id=%255Bproject%255D%252Fcomponents%252Fprototype%252Fprototype-app.tsx+%255Bapp-client%255D+%2528ecmascript%2529:1678:54)
+    at Object.react_stack_bottom_frame (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15037:24)
+    at renderWithHooks (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4620:24)
+    at updateFunctionComponent (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6081:21)
+    at beginWork (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9098:47)
+    at performSyncWorkOnRoot (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10179:316)
+    at processRootScheduleInMicrotask (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10200:106)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10274:158)
+    at PrototypeApp (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/components_prototype_prototype-app_tsx_0y307u8._.js?id=%255Bproject%255D%252Fcomponents%252Fprototype%252Fprototype-app.tsx+%255Bapp-client%255D+%2528ecmascript%2529:867:259)
+    at PrototypePage (app\[locale]\prototype\page.tsx:20:10)
+  18 |   setRequestLocale(locale)
+  19 |
+> 20 |   return <PrototypeApp locale={locale as AppLocale} />
+     |          ^
+  21 | }
+  22 |
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[browser] Uncaught ReferenceError: profileTab is not defined
+    at eval (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/components_prototype_prototype-app_tsx_0y307u8._.js?id=%255Bproject%255D%252Fcomponents%252Fprototype%252Fprototype-app.tsx+%255Bapp-client%255D+%2528ecmascript%2529:4515:179)
+    at Array.map (<anonymous>)
+    at ProfileView (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/components_prototype_prototype-app_tsx_0y307u8._.js?id=%255Bproject%255D%252Fcomponents%252Fprototype%252Fprototype-app.tsx+%255Bapp-client%255D+%2528ecmascript%2529:4512:19)
+    at Object.react_stack_bottom_frame (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15037:24)
+    at renderWithHooks (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4620:24)
+    at updateFunctionComponent (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6081:21)
+    at beginWork (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9098:47)
+    at performSyncWorkOnRoot (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10179:316)
+    at processRootScheduleInMicrotask (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10200:106)
+    at <unknown> (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10274:158)
+    at PrototypeApp (file://C:/Users/Carine Tamon/Desktop/CLAUDE WORKSPACE/projects/aurion/aurionclinical.com/aurion/.next/dev/static/chunks/components_prototype_prototype-app_tsx_0y307u8._.js?id=%255Bproject%255D%252Fcomponents%252Fprototype%252Fprototype-app.tsx+%255Bapp-client%255D+%2528ecmascript%2529:1355:259)
+    at PrototypePage (app\[locale]\prototype\page.tsx:20:10)
+  18 |   setRequestLocale(locale)
+  19 |
+> 20 |   return <PrototypeApp locale={locale as AppLocale} />
+     |          ^
+  21 | }
+  22 |
