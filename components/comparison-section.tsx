@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation"
 import { Button } from "@/components/ui/button"
 
 /* ─────────────────────────────────────────────────────────────────────────── */
-/*  ComparisonSection — Aurion vs audio-only AI scribes                        */
+/*  ComparisonSection — Aurion vs audio-only documentation tools                */
 /*  Competitor data sourced from public product pages, April 2025              */
 /* ─────────────────────────────────────────────────────────────────────────── */
 
@@ -182,11 +182,11 @@ export function ComparisonSection() {
           How Aurion compares
         </p>
         <h2 className="mt-5 max-w-[680px] font-serif text-4xl leading-[1.15] tracking-tight text-foreground md:text-5xl text-balance">
-          Audio-only scribes capture half the encounter. Aurion captures all of it.
+          Audio-only tools capture half the encounter. Aurion captures the full picture.
         </h2>
         <div className="mt-6 h-px w-10 bg-accent" />
-        <p className="mt-7 max-w-[620px] text-base leading-[1.8] text-foreground/80 md:text-lg">
-          Every scribe on this list captures what is said. None captures what is seen — the physical exam, the imaging on screen, the labs reviewed in real time. That is the gap Aurion closes.
+        <p className="mt-7 max-w-[620px] text-[17px] leading-[1.8] text-foreground/80 md:text-xl">
+          Most documentation assistants here capture what is said. None captures what is seen — the physical exam, the imaging on screen, the labs reviewed in real time. Multimodal clinical intelligence closes that gap.
         </p>
       </div>
 

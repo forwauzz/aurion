@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Plans for every depth of capture",
-    "subtitle": "Start free with audio and exam scribing, then scale to full visual and screen context — or talk to us about teams and enterprise.",
+    "subtitle": "Start free with audio and exam documentation, then scale to full visual and screen context — or talk to us about teams and enterprise.",
     "seeTiers": "See tiers",
     "talkToUs": "Talk to us",
     "bookDemo": "Book a demo"
@@ -31,7 +31,7 @@
         "price": "$0",
         "period": "/mo",
         "subtext": "No credit card required",
-        "description": "Audio + exam scribe. Try VISION at no cost.",
+        "description": "Audio + structured exam notes. Try Aurion at no cost.",
         "features": [
           { "text": "Audio transcription (unlimited)", "included": true },
           { "text": "Basic SOAP structure output", "included": true },
@@ -51,7 +51,7 @@
         "period": "/mo",
         "annualPrice": "~$49 USD",
         "annualNote": "billed monthly",
-        "description": "Full scribe workflow with specialty templates.",
+        "description": "Full documentation workflow with specialty templates.",
         "sectionHeader": "Visual transcription of physical exam, radiology and other exams or reports",
         "features": [
           { "text": "Screen capture — X-ray, labs, EMR", "included": true },

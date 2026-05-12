@@ -77,7 +77,7 @@ export default function Home() {
         <CoreDifferenceSection />
       </AnimateIn>
 
-      {/* ── 11. Comparison — Aurion vs audio-only scribes ── */}
+      {/* ── 11. Comparison — Aurion vs audio-only documentation ── */}
       <AnimateIn direction="up" threshold={0.06} duration={850}>
         <ComparisonSection />
       </AnimateIn>

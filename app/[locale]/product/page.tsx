@@ -33,8 +33,8 @@ const WORKFLOW_STEPS = [
   },
   {
     num: "05",
-    title: "Stage 1: Audio draft",
-    body: "Within 60 seconds of stopping, a structured note draft is ready for review — grounded in the full transcript.",
+    title: "Stage 1: Structured note",
+    body: "Within 60 seconds of stopping, a structured note is ready for your single review — grounded in the full transcript.",
   },
   {
     num: "06",
@@ -44,7 +44,7 @@ const WORKFLOW_STEPS = [
   {
     num: "07",
     title: "Review, edit, approve",
-    body: "You review the draft, make any changes, and approve. The note reflects your judgment, not just the system's output.",
+    body: "You review the complete note once, make any changes, and approve. The note reflects your judgment, not just the system's output.",
   },
   {
     num: "08",
@@ -57,7 +57,7 @@ const CAPABILITIES = [
   {
     icon: Mic,
     title: "Audio transcription",
-    body: "Full encounter audio transcribed at sentence-level precision. The transcript is the canonical backbone every note is built from.",
+    body: "Full encounter audio transcribed at sentence-level precision. The transcript is the backbone every structured note is built from.",
   },
   {
     icon: ScanEye,
@@ -120,8 +120,8 @@ export default async function ProductPage() {
             Documentation that captures the full clinical encounter.
           </h1>
           <div className="mt-7 h-px w-10 bg-accent opacity-70" />
-          <p className="mt-8 max-w-[520px] text-[16px] leading-[1.75] text-[#F5F4F0]/65">
-            Audio-only scribes capture what is said. Aurion captures what is said, observed, and reviewed on screen — then turns the full encounter into a structured note you control.
+          <p className="mt-8 max-w-[540px] text-[17px] leading-[1.75] text-[#F5F4F0]/70 md:text-[18px]">
+            Audio-only documentation captures what is said. Aurion captures what is said, observed, and reviewed on screen — multimodal clinical intelligence turns the full encounter into a structured note you control.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Button
@@ -135,7 +135,7 @@ export default async function ProductPage() {
               asChild
               size="lg"
               variant="outline"
-              className="rounded-none border-[#F5F4F0]/30 px-7 text-[13px] tracking-wide text-[#F5F4F0] hover:bg-[#F5F4F0]/10 hover:border-[#F5F4F0]/50 transition-all"
+              className="rounded-none !border-[#F5F4F0]/45 !bg-transparent px-7 text-[13px] tracking-wide !text-[#F5F4F0] transition-all hover:!border-[#F5F4F0] hover:!bg-[#F5F4F0] hover:!text-[#0B1F3A]"
             >
               <Link href="/waitlist">Book a demo</Link>
             </Button>
@@ -218,9 +218,9 @@ export default async function ProductPage() {
                 <span className="text-[10px] tracking-[0.2em] text-accent uppercase">Stage 1</span>
                 <div className="h-px flex-1 bg-border/50" />
               </div>
-              <h3 className="font-serif text-2xl text-foreground">Audio-first draft</h3>
-              <p className="mt-4 text-[14px] leading-relaxed text-muted-foreground">
-                Within 60 seconds of stopping the recording, a structured note draft is ready for review. Transcription, SOAP structure, and template mapping happen immediately so the clinician can move to the next patient while Stage 2 runs in the background.
+              <h3 className="font-serif text-2xl text-foreground">Audio-first structured note</h3>
+              <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
+                Within 60 seconds of stopping the recording, a structured note is ready for review. Transcription, SOAP structure, and template mapping happen immediately so the clinician can move to the next patient while Stage 2 runs in the background.
               </p>
               <ul className="mt-6 space-y-3">
                 {["Full audio transcription via Whisper v3", "Immediate SOAP note generation", "Ready for review in under 60 seconds", "Specialty template applied automatically"].map((item) => (
@@ -346,7 +346,7 @@ export default async function ProductPage() {
             <Button asChild size="lg" className="min-w-[180px] rounded-none bg-[#F5F4F0] px-7 text-[13px] tracking-wide text-[#0B1F3A] hover:bg-white">
               <Link href="/pricing">Start free</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="min-w-[180px] rounded-none border-[#F5F4F0]/30 px-7 text-[13px] tracking-wide text-[#F5F4F0] hover:bg-[#F5F4F0]/10">
+            <Button asChild size="lg" variant="outline" className="min-w-[180px] rounded-none !border-[#F5F4F0]/45 !bg-transparent px-7 text-[13px] tracking-wide !text-[#F5F4F0] hover:!border-[#F5F4F0] hover:!bg-[#F5F4F0] hover:!text-[#0B1F3A]">
               <Link href="/waitlist">Book a demo</Link>
             </Button>
           </div>

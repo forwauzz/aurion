@@ -1,6 +1,6 @@
 {
   "hero": {
-    "eyebrow": "AI physician assistant",
+    "eyebrow": "Multimodal clinical intelligence",
     "title": "The assistant that sees the full encounter — not just the conversation.",
     "subtitle": "Aurion captures what you observe, examine, and review on screen. Physical findings, imaging, labs, patient presentation — all grounded in the note. Not reconstructed. Derived from the visit itself.",
     "support": "Works with smart glasses, wearables, and devices already in your workflow.",
@@ -62,7 +62,7 @@
   "visualCapture": {
     "eyebrow": "What sets Aurion apart",
     "title": "Every clinically relevant moment. In the record.",
-    "subtitle": "Other tools capture the conversation. Aurion captures the full clinical reality — what you see, what you examine, and what you review. The physical exam is not reconstructed from memory. The imaging is not described after the fact. It is all grounded in what actually happened.",
+    "subtitle": "Audio-only documentation tools capture the conversation. Aurion captures the full clinical reality — what you see, what you examine, and what you review. The physical exam is not reconstructed from memory. The imaging is not described after the fact. It is all grounded in what actually happened.",
     "pillars": [
       {
         "label": "Physical Examination",
@@ -155,7 +155,7 @@
     "items": ["Smart glasses", "Wearables", "Body cameras", "Room cameras"]
   },
   "stats": {
-    "eyebrow": "Why physicians choose Aurion over transcription-only tools",
+    "eyebrow": "Why teams choose multimodal clinical intelligence",
     "items": [
       {
         "title": "Passive capture",

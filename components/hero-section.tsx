@@ -27,11 +27,11 @@ export async function HeroSection() {
 
           <div className="mt-7 h-px w-10 bg-accent" />
 
-          <p className="mt-7 max-w-[480px] text-base leading-[1.75] text-muted-foreground md:text-[17px]">
+          <p className="mt-7 max-w-[520px] text-[17px] leading-[1.75] text-muted-foreground md:text-lg">
             {t("hero.subtitle")}
           </p>
 
-          <p className="mt-4 max-w-[440px] text-sm leading-relaxed text-muted-foreground/55">
+          <p className="mt-4 max-w-[460px] text-[15px] leading-relaxed text-muted-foreground/60 md:text-base">
             {t("hero.support")}
           </p>
 
@@ -124,7 +124,7 @@ export async function HeroSection() {
                 {t("hero.cards.observeLabel")}
               </span>
             </div>
-            <div className="space-y-2 text-[13px] leading-relaxed text-foreground/70">
+            <div className="space-y-2 text-[14px] leading-relaxed text-foreground/75 md:text-[15px]">
               <p>{t("hero.cards.observe1")}</p>
               <p>{t("hero.cards.observe2")}</p>
               <p>{t("hero.cards.observe3")}</p>
@@ -138,7 +138,7 @@ export async function HeroSection() {
                 {t("hero.cards.screenLabel")}
               </span>
             </div>
-            <div className="space-y-2 text-[13px] leading-relaxed text-foreground/70">
+            <div className="space-y-2 text-[14px] leading-relaxed text-foreground/75 md:text-[15px]">
               <p>{t("hero.cards.screen1")}</p>
               <p>{t("hero.cards.screen2")}</p>
               <p>{t("hero.cards.screen3")}</p>
@@ -152,11 +152,11 @@ export async function HeroSection() {
                 {t("hero.cards.noteLabel")}
               </span>
             </div>
-            <div className="space-y-2 text-[13px]">
-              <p className="font-medium text-foreground/85">{t("hero.cards.examTitle")}</p>
-              <p className="text-[12px] text-muted-foreground">{t("hero.cards.examSample")}</p>
-              <p className="mt-2 font-medium text-foreground/85">{t("hero.cards.imagingTitle")}</p>
-              <p className="text-[12px] text-muted-foreground">{t("hero.cards.imagingSample")}</p>
+            <div className="space-y-2 text-[14px] md:text-[15px]">
+              <p className="font-medium text-foreground/90">{t("hero.cards.examTitle")}</p>
+              <p className="text-[13px] text-muted-foreground md:text-sm">{t("hero.cards.examSample")}</p>
+              <p className="mt-2 font-medium text-foreground/90">{t("hero.cards.imagingTitle")}</p>
+              <p className="text-[13px] text-muted-foreground md:text-sm">{t("hero.cards.imagingSample")}</p>
             </div>
           </div>
 

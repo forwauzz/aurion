@@ -1,6 +1,6 @@
 {
   "hero": {
-    "eyebrow": "La référence en IA clinique",
+    "eyebrow": "Intelligence clinique multimodale",
     "title": "Une documentation clinique pour la rencontre au complet — pas seulement la conversation.",
     "subtitle": "Aurion capte ce qui se passe en salle : examen physique, imagerie à l’écran et dialogue — puis transforme le tout en notes structurées que vous pouvez réviser et exporter.",
     "support": "Objets connectables, lunettes intelligentes et appareils déjà présents dans votre flux de travail. Conçu pour les journées chargées en clinique et en salle de procédure.",
@@ -62,7 +62,7 @@
   "visualCapture": {
     "eyebrow": "Ce qui distingue Aurion",
     "title": "Chaque moment cliniquement pertinent. Dans le dossier.",
-    "subtitle": "D’autres outils captent la conversation. Aurion capte la réalité clinique complète — ce que vous voyez, ce que vous examinez et ce que vous révisez. L’examen physique n’est pas reconstruit de mémoire. L’imagerie n’est pas décrite après coup. Tout est ancré dans ce qui s’est réellement passé.",
+    "subtitle": "Les outils limités à l’audio captent surtout la conversation. Aurion capte la réalité clinique complète — ce que vous voyez, ce que vous examinez et ce que vous révisez. L’examen physique n’est pas reconstruit de mémoire. L’imagerie n’est pas décrite après coup. Tout est ancré dans ce qui s’est réellement passé.",
     "pillars": [
       {
         "label": "Examen physique",
@@ -155,7 +155,7 @@
     "items": ["Lunettes intelligentes", "Objets connectables", "Caméras corporelles", "Caméras de salle"]
   },
   "stats": {
-    "eyebrow": "Pourquoi les équipes vont au-delà des scribes audio seuls",
+    "eyebrow": "Pourquoi les équipes choisissent l’intelligence clinique multimodale",
     "items": [
       {
         "title": "Capture passive",

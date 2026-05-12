@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { type FormEvent, memo, useMemo, useRef, useState } from "react"
 import {
   Bell,
   CalendarDays,
@@ -11,7 +11,6 @@ import {
   Copy,
   Download,
   Eye,
-  FileText,
   FolderOpen,
   Languages,
   Library,
@@ -22,6 +21,7 @@ import {
   Play,
   Plus,
   Search,
+  Send,
   Settings,
   ShieldCheck,
   Square,
@@ -39,8 +39,6 @@ type View =
   | "patients"
   | "newVisit"
   | "capture"
-  | "draft"
-  | "processing"
   | "validation"
   | "templates"
   | "profile"
@@ -225,7 +223,8 @@ const copy = {
     },
     setup: {
       title: "Prepare Visit",
-      subtitle: "Confirm context before capture begins.",
+      subtitle: "Visit type and encounter context are enough to start. Defaults for device, language, and template come from your profile.",
+      patientLabel: "Encounter",
       identifier: "Temporary identifier",
       visitType: "Visit type",
       context: "Encounter context",
@@ -235,8 +234,9 @@ const copy = {
       deviceOptions: ["Smart glasses", "Body camera", "Phone / tablet"],
       outputLanguage: "Output Language",
       languageOptions: ["Auto detect", "English", "French"],
-      template: "Template",
-      selectTemplate: "Select Template",
+      template: "Note template",
+      templateHint: "Change anytime in Templates or Profile.",
+      selectTemplate: "Change template",
     },
     capture: {
       title: "Live Visit Capture",
@@ -249,26 +249,9 @@ const copy = {
       pause: "Pause",
       stop: "Stop Recording",
     },
-    draft: {
-      title: "Stage 1 Audio Draft",
-      subtitle: "Fast draft generated from the audio transcript. Visual sections remain pending.",
-      approve: "Approve Audio Draft",
-      skip: "Skip",
-      edit: "Edit Draft",
-      pending: "Awaiting visual enrichment",
-    },
-    processing: {
-      title: "Generating Full Note",
-      subtitle: "Aurion is enriching the audio draft with visual and screen-derived observations.",
-      transcript: "Transcript finalized",
-      frames: "Clinical frames selected",
-      masking: "PHI masking confirmed",
-      screen: "Screen context extracted",
-      note: "Full note generated",
-    },
     validation: {
       title: "Review & Validate",
-      subtitle: "Approve the note with source-linked evidence before it enters the patient file.",
+      subtitle: "One review of the complete note before it enters the patient file. Internal validation can use source-linked evidence separately.",
       approve: "Approve Note",
       copy: "Copy Note",
       export: "Export DOCX",
@@ -278,6 +261,12 @@ const copy = {
       visual: "Visual observation evidence",
       screen: "Screen-derived evidence",
       audit: "Consent and privacy audit",
+      chatTitle: "Edit with Aurion",
+      chatHint: "Describe changes in plain language. This demo applies simple updates; production would use a secure model.",
+      chatPlaceholder: "e.g. Change right shoulder to left shoulder, or add that pain is worse on stairs…",
+      chatAssistantIntro:
+        "Ask for edits in plain language, or change the note directly above. Try “swap right and left shoulder” or “add stair pain.”",
+      chatSend: "Send",
     },
     patients: {
       title: "Patient Files",
@@ -364,7 +353,8 @@ const copy = {
     },
     setup: {
       title: "Préparer la visite",
-      subtitle: "Confirmer le contexte avant le début de la capture.",
+      subtitle: "Le type de visite et le contexte suffisent pour démarrer. Dispositif, langue et modèle viennent du profil.",
+      patientLabel: "Rencontre",
       identifier: "Identifiant temporaire",
       visitType: "Type de visite",
       context: "Contexte de la rencontre",
@@ -374,8 +364,9 @@ const copy = {
       deviceOptions: ["Lunettes intelligentes", "Camera corporelle", "Telephone / tablette"],
       outputLanguage: "Langue de sortie",
       languageOptions: ["Detection automatique", "Anglais", "Francais"],
-      template: "Modèle",
-      selectTemplate: "Choisir un modèle",
+      template: "Modèle de note",
+      templateHint: "Modifiable dans Modèles ou Profil.",
+      selectTemplate: "Changer de modèle",
     },
     capture: {
       title: "Capture de la visite",
@@ -388,26 +379,9 @@ const copy = {
       pause: "Pause",
       stop: "Arreter l'enregistrement",
     },
-    draft: {
-      title: "Brouillon audio - étape 1",
-      subtitle: "Brouillon rapide généré à partir de l’audio. Les sections visuelles restent en attente.",
-      approve: "Approuver le brouillon audio",
-      skip: "Passer",
-      edit: "Modifier",
-      pending: "En attente d’enrichissement visuel",
-    },
-    processing: {
-      title: "Génération de la note complète",
-      subtitle: "Aurion enrichit le brouillon audio avec les observations visuelles et l’écran.",
-      transcript: "Transcription finalisée",
-      frames: "Images cliniques sélectionnées",
-      masking: "Masquage PHI confirmé",
-      screen: "Contexte d’écran extrait",
-      note: "Note complète générée",
-    },
     validation: {
       title: "Révision et validation",
-      subtitle: "Approuver la note avec des preuves liées aux sources avant le dossier patient.",
+      subtitle: "Une seule révision de la note complète avant le dossier patient. La traçabilité des sources reste pour la validation interne.",
       approve: "Approuver la note",
       copy: "Copier la note",
       export: "Exporter DOCX",
@@ -417,6 +391,12 @@ const copy = {
       visual: "Preuve visuelle",
       screen: "Preuve issue de l’écran",
       audit: "Audit consentement et confidentialité",
+      chatTitle: "Modifier avec Aurion",
+      chatHint: "Décrivez les changements en langage courant. Cette démo applique des mises à jour simples.",
+      chatPlaceholder: "p. ex. remplacer épaule droite par épaule gauche, ou ajouter douleur dans les escaliers…",
+      chatAssistantIntro:
+        "Demandez des modifications en langage courant, ou éditez la note ci-dessus. Essayez « inverser droite et gauche » ou « ajouter douleur aux escaliers ».",
+      chatSend: "Envoyer",
     },
     patients: {
       title: "Dossiers patients",
@@ -711,44 +691,79 @@ const soapNoteSections = [
       {
         heading: "S - Subjective",
         paragraphs: [
-          { text: "Chief Complaint: Right shoulder pain following trauma.", citations: ["audio-chief"] },
-          { text: "[Patient Name] is a [age]-year-old [male/female] presenting with right shoulder pain after a fall onto the right side on [date]. The patient reports immediate onset of pain and inability to lift the arm.", citations: ["audio-hpi"] },
-          { text: "Pain severity: 8/10. Pain location: right shoulder, localized over proximal humerus. Radiation: none. Aggravating factors include movement and lifting. Relieving factors include rest and sling immobilization.", citations: ["audio-hpi"] },
-          { text: "Associated symptoms: swelling present. No numbness or tingling reported. The patient was initially seen in the emergency department where a sling was applied and X-rays were performed.", citations: ["audio-hpi", "screen-xray"] },
-          { text: "Past Medical History: [e.g., Hypertension]. Medications: [List]. Allergies: [None / specify]. Social History: Occupation: [Important for functional assessment]. Smoking: [Yes/No].", citations: ["audio-hpi"] },
+          { text: "Right shoulder pain after a fall onto the right side. Pain is 8/10, localized over the proximal humerus, worse with movement, and improved with sling immobilization." },
         ],
       },
       {
         heading: "O - Objective",
         paragraphs: [
-          { text: "General: Patient alert, in moderate distress due to pain.", citations: ["video-inspection"] },
-          { text: "Inspection: swelling over right shoulder, mild deformity noted, no open wounds.", citations: ["video-inspection"] },
-          { text: "Palpation: tenderness over proximal humerus. No tenderness over clavicle or scapula.", citations: ["video-inspection"] },
-          { text: "Range of Motion: active ROM severely limited. Passive ROM painful.", citations: ["video-inspection"] },
-          { text: "Neurovascular Exam: sensation intact, including axillary nerve distribution. Motor: deltoid contraction present. Radial pulse palpable. Capillary refill < 2 seconds.", citations: ["video-neuro"] },
-          { text: "Imaging: X-ray right shoulder demonstrates proximal humerus fracture, minimally displaced surgical neck fracture, and no dislocation.", citations: ["screen-xray"] },
+          { text: "Swelling and mild deformity over the right shoulder. Active ROM is severely limited. Neurovascular exam is intact. X-ray shows a minimally displaced surgical neck fracture without dislocation." },
         ],
       },
       {
         heading: "A - Assessment",
         paragraphs: [
-          { text: "Right proximal humerus fracture, surgical neck, minimally displaced. No neurovascular compromise. Mechanism consistent with injury.", citations: ["screen-xray", "video-neuro"] },
+          { text: "Right proximal humerus fracture, surgical neck, minimally displaced, with no neurovascular compromise." },
         ],
       },
       {
         heading: "P - Plan",
         paragraphs: [
-          { text: "1. Immobilization: continue sling for 2-3 weeks.", citations: ["screen-plan"] },
-          { text: "2. Pain Management: acetaminophen +/- NSAIDs. Short course opioids if required.", citations: ["screen-plan"] },
-          { text: "3. Rehabilitation: begin pendulum exercises in 1-2 weeks. Gradual ROM progression under physiotherapy.", citations: ["screen-plan"] },
-          { text: "4. Follow-Up: reassess in 1-2 weeks with repeat X-ray. Monitor for displacement.", citations: ["screen-plan"] },
-          { text: "5. Activity Restrictions: no lifting with affected arm. Avoid overhead movements.", citations: ["screen-plan"] },
-          { text: "6. Prognosis: expected recovery 3-4 months. Good outcome anticipated with compliance.", citations: ["screen-plan"] },
+          { text: "Continue sling for 2-3 weeks, use acetaminophen +/- NSAIDs, begin pendulum exercises in 1-2 weeks, repeat X-ray at follow-up, and avoid lifting or overhead activity." },
         ],
       },
     ],
   },
 ]
+
+function buildInitialSoapNoteText(): string {
+  const [{ title, blocks }] = soapNoteSections
+  const body = blocks
+    .map((b) => `${b.heading}\n${b.paragraphs.map((p) => p.text).join(" ")}`)
+    .join("\n\n")
+  return `${title}\n\n${body}`
+}
+
+function mockApplyNoteEdit(noteText: string, instruction: string): { reply: string; nextNote: string } {
+  const ins = instruction.trim()
+  const lower = ins.toLowerCase()
+  let next = noteText
+
+  if (!ins) {
+    return { reply: "Describe how you want the note changed.", nextNote: next }
+  }
+
+  if (
+    /\bright\b.*\bleft\b|\bleft\b.*\bright\b|swap|change.*right.*to.*left|change.*left.*to.*right|inverser|droite.*gauche|gauche.*droite/i.test(
+      instruction,
+    )
+  ) {
+    next = next
+      .replace(/\bright shoulder\b/gi, "@@TMP_RIGHT@@")
+      .replace(/\bleft shoulder\b/gi, "right shoulder")
+      .replace(/@@TMP_RIGHT@@/g, "left shoulder")
+    return {
+      reply: "Demo: updated shoulder laterality where those phrases appeared. Review the note above.",
+      nextNote: next,
+    }
+  }
+
+  if (/stair|stairs|escalier/i.test(lower)) {
+    if (!/stair|escalier/i.test(next)) {
+      next = next.replace(/(S - Subjective\n)([^\n]+)/, (_, h: string, line: string) => `${h}${line.trim()} Pain is worse on stairs.`)
+    }
+    return {
+      reply: "Demo: added stair-related wording to the subjective line. Adjust in the note if needed.",
+      nextNote: next,
+    }
+  }
+
+  return {
+    reply:
+      'Demo: try “change right shoulder to left shoulder” or “add stair pain.” You can also edit the note directly above.',
+    nextNote: next,
+  }
+}
 
 const mergedNotePreview = `Merged Orthopedic SOAP Note - Shoulder Fracture
 
@@ -794,19 +809,12 @@ export function PrototypeApp({ locale }: { locale: AppLocale }) {
     [approved, selectedVisit.id],
   )
 
-  function openVisit(visit: Visit, mode: "setup" | "draft" | "validation" = "setup") {
+  function openVisit(visit: Visit, mode: "setup" | "validation" = "setup") {
     setSelectedVisit(visit)
     setConsent(false)
     setPaused(false)
     setCaptureStopped(false)
-    setActiveView(mode === "validation" ? "validation" : mode === "draft" ? "draft" : "newVisit")
-  }
-
-  function startProcessing() {
-    setActiveView("processing")
-    window.setTimeout(() => {
-      setActiveView("validation")
-    }, 1100)
+    setActiveView(mode === "validation" ? "validation" : "newVisit")
   }
 
   return (
@@ -930,17 +938,12 @@ export function PrototypeApp({ locale }: { locale: AppLocale }) {
                 setPaused(true)
                 setCaptureStopped(true)
               }}
-              onContinue={() => setActiveView("draft")}
+              onContinue={() => {
+                setApproved(false)
+                setActiveView("validation")
+              }}
             />
           )}
-          {activeView === "draft" && (
-            <DraftView
-              t={t}
-              note={note}
-              onContinue={startProcessing}
-            />
-          )}
-          {activeView === "processing" && <ProcessingView t={t} />}
           {activeView === "validation" && (
             <ValidationView
               t={t}
@@ -1020,7 +1023,7 @@ function ScheduleView({
   t: typeof copy.en | typeof copy.fr
   visitRows: Visit[]
   selectedVisit: Visit
-  onOpenVisit: (visit: Visit, mode?: "setup" | "draft" | "validation") => void
+  onOpenVisit: (visit: Visit, mode?: "setup" | "validation") => void
 }) {
   const [selectedProvider, setSelectedProvider] = useState("my")
   const providers = [
@@ -1096,11 +1099,7 @@ function ScheduleView({
                   ? t.common.startVisit
                   : t.common.prepareVisit
             const mode =
-              visit.status === "completed"
-                ? "validation"
-                : visit.status === "recorded"
-                  ? "draft"
-                  : "setup"
+              visit.status === "completed" || visit.status === "recorded" ? "validation" : "setup"
             return (
               <div
                 key={visit.id}
@@ -1201,37 +1200,59 @@ function NewVisitView({
   onSelectTemplate: () => void
   onStart: () => void
 }) {
+  const [visitType, setVisitType] = useState(visit.visitType)
+  const [context, setContext] = useState(visit.context)
+
   return (
-    <div className="mx-auto max-w-5xl p-5 md:p-10">
+    <div className="mx-auto max-w-2xl p-5 md:p-10">
       <div className="mb-8 text-center">
         <h1 className="font-serif text-5xl text-[#08111F]">{t.setup.title}</h1>
-        <p className="mt-2 text-[#667385]">{t.setup.subtitle}</p>
+        <p className="mt-3 text-base leading-relaxed text-[#667385]">{t.setup.subtitle}</p>
       </div>
 
       <div className="rounded-md border border-[#D4D9E1] bg-white p-6 shadow-sm">
-        <div className="grid gap-5 md:grid-cols-2">
-          <Field label={t.setup.identifier} value={`${visit.patient} · ${visit.id.toUpperCase()}`} />
-          <Field label={t.setup.visitType} value={visit.visitType} />
-          <Field label={t.setup.context} value={visit.context} wide />
-          <SelectField label={t.setup.inputs} choices={t.setup.inputOptions} />
-          <SelectField label={t.setup.device} choices={t.setup.deviceOptions} />
-          <SelectField label={t.setup.outputLanguage} choices={t.setup.languageOptions} />
-          <div className="space-y-2">
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6D7787]">
-              {t.setup.template}
-            </div>
-            <button
-              type="button"
-              onClick={onSelectTemplate}
-              className="flex min-h-14 w-full items-center justify-between rounded-md border border-[#C8CED6] bg-[#F8F8F6] px-4 text-left"
-            >
-              <span>
-                <span className="block font-medium text-[#17243A]">{template.name}</span>
-                <span className="text-sm text-[#667385]">{template.specialty}</span>
-              </span>
-              <ChevronRight className="size-4 text-[#6A7280]" />
-            </button>
-          </div>
+        <p className="text-sm text-[#667385]">
+          <span className="font-semibold text-[#17243A]">{t.setup.patientLabel}:</span>{" "}
+          {visit.patient} · {visit.id.toUpperCase()}
+        </p>
+
+        <div className="mt-6 space-y-5">
+          <label className="block space-y-2">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6D7787]">
+              {t.setup.visitType}
+            </span>
+            <input
+              value={visitType}
+              onChange={(e) => setVisitType(e.target.value)}
+              className="h-12 w-full rounded-md border border-[#C8CED6] bg-[#F8F8F6] px-4 text-sm font-medium text-[#17243A] outline-none transition-colors focus:border-[#081D36] focus:bg-white"
+            />
+          </label>
+          <label className="block space-y-2">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6D7787]">
+              {t.setup.context}
+            </span>
+            <textarea
+              value={context}
+              onChange={(e) => setContext(e.target.value)}
+              rows={4}
+              className="w-full resize-y rounded-md border border-[#C8CED6] bg-[#F8F8F6] px-4 py-3 text-sm leading-6 text-[#17243A] outline-none transition-colors focus:border-[#081D36] focus:bg-white"
+            />
+          </label>
+        </div>
+
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-[#ECEFF2] pt-5">
+          <p className="text-sm text-[#667385]">
+            <span className="font-medium text-[#17243A]">{template.name}</span>
+            <span className="mx-2 text-[#C8CED6]">·</span>
+            <span>{t.setup.templateHint}</span>
+          </p>
+          <button
+            type="button"
+            onClick={onSelectTemplate}
+            className="text-sm font-semibold text-[#244A77] hover:text-[#081D36]"
+          >
+            {t.setup.selectTemplate}
+          </button>
         </div>
 
         <label className="mt-6 flex items-center gap-3 rounded-md border border-[#D8C992] bg-[#FBF7EA] p-4 text-sm font-medium text-[#17243A]">
@@ -1252,48 +1273,6 @@ function NewVisitView({
         </div>
       </div>
     </div>
-  )
-}
-
-function Field({ label, value, wide }: { label: string; value: string; wide?: boolean }) {
-  return (
-    <label className={cn("space-y-2", wide && "md:col-span-2")}>
-      <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6D7787]">
-        {label}
-      </span>
-      <textarea
-        readOnly
-        value={value}
-        rows={wide ? 3 : 1}
-        className="w-full resize-none rounded-md border border-[#C8CED6] bg-[#F8F8F6] px-4 py-3 text-sm text-[#17243A] outline-none"
-      />
-    </label>
-  )
-}
-
-function SelectField({
-  label,
-  choices,
-}: {
-  label: string
-  choices: readonly string[]
-}) {
-  return (
-    <label className="space-y-2">
-      <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6D7787]">
-        {label}
-      </span>
-      <select
-        defaultValue={choices[0]}
-        className="h-14 w-full rounded-md border border-[#C8CED6] bg-[#F8F8F6] px-4 text-sm font-medium text-[#17243A] outline-none transition-colors hover:border-[#9FAABD] focus:border-[#081D36] focus:bg-white"
-      >
-        {choices.map((choice) => (
-          <option key={choice} value={choice}>
-            {choice}
-          </option>
-        ))}
-      </select>
-    </label>
   )
 }
 
@@ -1540,123 +1519,103 @@ function PatientVisitsMenu({
   )
 }
 
-function DraftView({
+const EditableSoapNote = memo(function EditableSoapNote({
+  value,
+  onChange,
+}: {
+  value: string
+  onChange: (next: string) => void
+}) {
+  return (
+    <article className="overflow-hidden rounded-md border border-[#D4D9E1] bg-white p-4 shadow-sm md:p-6">
+      <label className="sr-only" htmlFor="validation-soap-note">
+        Clinical note
+      </label>
+      <textarea
+        id="validation-soap-note"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        spellCheck
+        className={cn(
+          "min-h-[min(20rem,calc(100vh-28rem))] w-full resize-y rounded-md border border-[#E3E6EA] bg-[#FAFAF8] p-5 font-sans text-sm leading-7 text-[#243248] outline-none transition-colors",
+          "focus:border-[#BFD4E6] focus:bg-white focus:ring-1 focus:ring-[#BFD4E6]",
+        )}
+      />
+    </article>
+  )
+})
+
+type ChatMsg = { id: string; role: "user" | "assistant"; content: string }
+
+function NoteEditChatPanel({
   t,
-  note,
-  onContinue,
+  messages,
+  input,
+  onInputChange,
+  onSend,
 }: {
   t: typeof copy.en | typeof copy.fr
-  note: typeof localizedVisitText.en | typeof localizedVisitText.fr
-  onContinue: () => void
+  messages: ChatMsg[]
+  input: string
+  onInputChange: (value: string) => void
+  onSend: () => void
 }) {
-  return (
-    <div className="mx-auto max-w-6xl p-5 md:p-10">
-        <div className="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-          <div>
-            <h1 className="font-serif text-5xl text-[#08111F]">{t.draft.title}</h1>
-            <p className="mt-2 text-[#667385]">{t.draft.subtitle}</p>
-          </div>
-        </div>
-        <NoteSurface t={t} note={note} pending />
-        <div className="mt-6 flex flex-wrap justify-end gap-3">
-          <ActionButton variant="secondary">{t.draft.edit}</ActionButton>
-          <ActionButton variant="secondary" onClick={onContinue}>
-            {t.draft.skip}
-          </ActionButton>
-          <ActionButton onClick={onContinue}>
-            <CheckCircle2 className="size-4" />
-            {t.draft.approve}
-          </ActionButton>
-        </div>
-    </div>
-  )
-}
-
-function ProcessingView({ t }: { t: typeof copy.en | typeof copy.fr }) {
-  return (
-    <div className="grid min-h-full place-items-center p-6">
-      <div className="w-full max-w-xl rounded-md border border-[#D4D9E1] bg-white p-8 text-center">
-        <div className="mx-auto grid size-16 place-items-center rounded-full bg-[#081D36] text-[#D1B464]">
-          <Stethoscope className="size-8" />
-        </div>
-        <h1 className="mt-6 font-serif text-4xl text-[#08111F]">{t.processing.title}</h1>
-        <p className="mt-2 text-[#667385]">{t.processing.subtitle}</p>
-        <div className="mt-8 space-y-3 text-left">
-          {[t.processing.transcript, t.processing.frames, t.processing.masking, t.processing.screen, t.processing.note].map((step) => (
-            <div key={step} className="flex items-center gap-3 rounded-md bg-[#F6F7F8] p-3 text-sm font-medium text-[#17243A]">
-              <CheckCircle2 className="size-5 text-emerald-600" />
-              {step}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function CitationButton({
-  evidenceId,
-  onSelect,
-}: {
-  evidenceId: keyof typeof evidenceLibrary
-  onSelect: (id: keyof typeof evidenceLibrary) => void
-}) {
-  const evidence = evidenceLibrary[evidenceId]
-  const label = evidence.kind === "Audio transcript" ? "A" : evidence.kind === "Video frame" ? "V" : "S"
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault()
+    onSend()
+  }
 
   return (
-    <button
-      type="button"
-      onClick={() => onSelect(evidenceId)}
-      className="ml-2 inline-flex rounded border border-[#BFD4E6] bg-[#EFF6FB] px-1.5 py-0.5 align-baseline text-[11px] font-semibold text-[#245B82] hover:border-[#2A6F9F] hover:bg-white"
-      title={evidence.title}
+    <section
+      aria-label={t.validation.chatTitle}
+      className="flex max-h-[min(22rem,42vh)] min-h-[14rem] flex-col overflow-hidden rounded-md border border-[#D4D9E1] bg-white shadow-sm"
     >
-      [{label}]
-    </button>
-  )
-}
-
-function SoapNoteView({
-  selectedEvidence,
-  onSelectEvidence,
-}: {
-  selectedEvidence: keyof typeof evidenceLibrary
-  onSelectEvidence: (id: keyof typeof evidenceLibrary) => void
-}) {
-  return (
-    <article className="overflow-hidden rounded-md border border-[#D4D9E1] bg-white p-4 shadow-sm md:p-8">
-      {soapNoteSections.map((section) => (
-        <div key={section.title}>
-          <h2 className="font-serif text-3xl text-[#08111F] md:text-4xl">{section.title}</h2>
-          <div className="mt-8 space-y-8">
-            {section.blocks.map((block) => (
-              <section key={block.heading}>
-                <h3 className="text-xl font-semibold text-[#173B66] md:text-2xl">{block.heading}</h3>
-                <div className="mt-4 space-y-4">
-                  {block.paragraphs.map((paragraph) => (
-                    <p
-                      key={paragraph.text}
-                      className="rounded-md border border-transparent p-3 text-sm leading-7 text-[#243248] focus-within:border-[#BFD4E6] focus-within:bg-[#F8FBFD] md:text-base"
-                      contentEditable
-                      suppressContentEditableWarning
-                    >
-                      {paragraph.text}
-                      {paragraph.citations.map((evidenceId) => (
-                        <CitationButton
-                          key={evidenceId}
-                          evidenceId={evidenceId as keyof typeof evidenceLibrary}
-                          onSelect={onSelectEvidence}
-                        />
-                      ))}
-                    </p>
-                  ))}
-                </div>
-              </section>
-            ))}
+      <header className="border-b border-[#ECEFF2] px-4 py-3">
+        <h3 className="text-sm font-semibold text-[#08111F]">{t.validation.chatTitle}</h3>
+        <p className="mt-1 text-xs leading-relaxed text-[#667385]">{t.validation.chatHint}</p>
+      </header>
+      <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-4 py-3">
+        {messages.map((m) => (
+          <div
+            key={m.id}
+            className={cn(
+              "max-w-[95%] rounded-lg px-3 py-2 text-sm leading-relaxed",
+              m.role === "user"
+                ? "ml-auto bg-[#EEF3F8] text-[#17243A]"
+                : "mr-auto border border-[#E3E6EA] bg-[#FAFAF8] text-[#243248]",
+            )}
+          >
+            {m.content}
           </div>
-        </div>
-      ))}
-    </article>
+        ))}
+      </div>
+      <form onSubmit={handleSubmit} className="flex gap-2 border-t border-[#ECEFF2] p-3">
+        <label className="sr-only" htmlFor="note-edit-chat-input">
+          {t.validation.chatPlaceholder}
+        </label>
+        <textarea
+          id="note-edit-chat-input"
+          value={input}
+          onChange={(e) => onInputChange(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+              e.preventDefault()
+              onSend()
+            }
+          }}
+          rows={2}
+          placeholder={t.validation.chatPlaceholder}
+          className="min-h-[44px] flex-1 resize-none rounded-md border border-[#C8CED6] bg-[#F8F8F6] px-3 py-2 text-sm text-[#17243A] outline-none placeholder:text-[#8994A4] focus:border-[#081D36] focus:bg-white"
+        />
+        <button
+          type="submit"
+          className="grid size-11 shrink-0 place-items-center self-end rounded-md bg-[#081D36] text-white hover:bg-[#173B66]"
+          aria-label={t.validation.chatSend}
+        >
+          <Send className="size-4" />
+        </button>
+      </form>
+    </section>
   )
 }
 
@@ -1690,7 +1649,9 @@ function EvidenceDetail({
                   : "border-[#D4D9E1] bg-[#F6F7F8]",
             )}
           >
-            {evidence.kind !== "Audio transcript" && evidence.media?.[index] && (
+            {evidence.kind !== "Audio transcript" &&
+              "media" in evidence &&
+              evidence.media[index] && (
               <figure className="mb-3 overflow-hidden rounded-md border border-[#CBD3DD] bg-[#081D36]">
                 <img
                   src={evidence.media[index].src}
@@ -1710,8 +1671,8 @@ function EvidenceDetail({
 
 function ValidationView({
   t,
-  note,
-  visit,
+  note: _note,
+  visit: _visit,
   approved,
   onApprove,
   onReturn,
@@ -1724,9 +1685,14 @@ function ValidationView({
   onReturn: () => void
 }) {
   const [selectedEncounter, setSelectedEncounter] = useState("doctor")
-  const [selectedEvidence, setSelectedEvidence] = useState<keyof typeof evidenceLibrary>("audio-chief")
   const [isCombining, setIsCombining] = useState(false)
   const [mergedReady, setMergedReady] = useState(false)
+  const [noteText, setNoteText] = useState(buildInitialSoapNoteText)
+  const [chatInput, setChatInput] = useState("")
+  const chatId = useRef(0)
+  const [chatMessages, setChatMessages] = useState<ChatMsg[]>(() => [
+    { id: "intro", role: "assistant", content: t.validation.chatAssistantIntro },
+  ])
   const activeEncounter = encounterHistory.find((item) => item.id === selectedEncounter) ?? encounterHistory[0]
 
   function combineNotes() {
@@ -1738,8 +1704,25 @@ function ValidationView({
     }, 900)
   }
 
+  function sendChatMessage() {
+    const text = chatInput.trim()
+    if (!text) return
+    setChatInput("")
+    const { reply, nextNote } = mockApplyNoteEdit(noteText, text)
+    setNoteText(nextNote)
+    const u = `u-${++chatId.current}`
+    const a = `a-${++chatId.current}`
+    setChatMessages((prev) => [
+      ...prev,
+      { id: u, role: "user", content: text },
+      { id: a, role: "assistant", content: reply },
+    ])
+  }
+
+  const showChat = !isCombining
+
   return (
-    <div className="grid gap-6 p-4 md:p-8 xl:grid-cols-[240px_minmax(0,1fr)_minmax(300px,360px)]">
+    <div className="grid gap-6 p-4 md:p-8 xl:grid-cols-[240px_minmax(0,1fr)]">
       <SeenByTimeline selected={selectedEncounter} onSelect={setSelectedEncounter} />
 
       <section className="min-w-0">
@@ -1781,10 +1764,18 @@ function ValidationView({
             </pre>
           </div>
         ) : (
-          <SoapNoteView
-            selectedEvidence={selectedEvidence}
-            onSelectEvidence={setSelectedEvidence}
-          />
+          <div className="flex flex-col gap-4">
+            <EditableSoapNote value={noteText} onChange={setNoteText} />
+            {showChat && (
+              <NoteEditChatPanel
+                t={t}
+                messages={chatMessages}
+                input={chatInput}
+                onInputChange={setChatInput}
+                onSend={sendChatMessage}
+              />
+            )}
+          </div>
         )}
         <div className="mt-6 flex flex-wrap justify-end gap-3">
           <ActionButton variant="secondary">
@@ -1805,58 +1796,7 @@ function ValidationView({
           </ActionButton>
         </div>
       </section>
-
-      <aside className="min-w-0 space-y-4">
-        <label className="block rounded-md border border-[#D4D9E1] bg-white p-4">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#6D7787]">
-            {t.capture.changes}
-          </span>
-          <textarea
-            className="mt-3 min-h-[150px] w-full resize-none rounded-md border border-[#C8CED6] bg-[#F8F8F6] p-3 text-sm leading-6 text-[#17243A] outline-none focus:border-[#081D36] focus:bg-white"
-            placeholder={t.capture.changesPlaceholder}
-          />
-        </label>
-        <h2 className="text-2xl font-semibold text-[#08111F]">{t.validation.evidence}</h2>
-        <EvidenceDetail evidenceId={selectedEvidence} />
-      </aside>
     </div>
-  )
-}
-
-function NoteSurface({
-  t,
-  note,
-  pending,
-}: {
-  t: typeof copy.en | typeof copy.fr
-  note: typeof localizedVisitText.en | typeof localizedVisitText.fr
-  pending?: boolean
-}) {
-  return (
-    <article className="rounded-md border border-[#D4D9E1] bg-white p-8 shadow-sm">
-      <h2 className="font-serif text-4xl text-[#08111F]">Knee Follow-up Documentation</h2>
-      <div className="mt-8 space-y-7 text-[#17243A]">
-        <NoteSection title="History of Present Illness" text={`${note.hpi} [1]`} />
-        <NoteSection
-          title="Physical Examination"
-          text={pending ? `${t.draft.pending}.` : `${note.exam} [2]`}
-        />
-        <NoteSection
-          title="Screen Review"
-          text={pending ? `${t.draft.pending}.` : `${note.screen} [3]`}
-        />
-        <NoteSection title="Plan" text={`${note.plan} [1]`} />
-      </div>
-    </article>
-  )
-}
-
-function NoteSection({ title, text }: { title: string; text: string }) {
-  return (
-    <section>
-      <h3 className="text-xl font-semibold text-[#08111F]">{title}</h3>
-      <p className="mt-2 leading-7 text-[#243248]">{text}</p>
-    </section>
   )
 }
 

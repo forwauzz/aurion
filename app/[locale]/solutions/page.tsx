@@ -17,7 +17,7 @@ const SPECIALTIES = [
     label: "Orthopedic Surgery",
     eyebrow: "Orthopedics",
     headline: "The exam is visual. The record should be too.",
-    body: "Gait patterns, range of motion measurements, palpation findings, and imaging interpretation are the substance of orthopedic documentation. Audio-only scribes capture the conversation. Aurion captures the full exam.",
+    body: "Gait patterns, range of motion measurements, palpation findings, and imaging interpretation are the substance of orthopedic documentation. Audio-only tools capture the dialogue. Aurion captures the full exam.",
     bullets: [
       "Gait observation and weight-bearing assessment",
       "ROM measurements — flexion, extension, rotation, with values",
@@ -116,8 +116,8 @@ export default async function SolutionsPage() {
             Built for specialties where the exam is visual.
           </h1>
           <div className="mt-7 h-px w-10 bg-accent opacity-70" />
-          <p className="mt-8 max-w-[520px] text-[16px] leading-[1.75] text-[#F5F4F0]/60">
-            Audio-only scribes capture less than half of what happens in a visual specialty clinic. Aurion is built for the specialties where observation, examination, and imaging are the core of the clinical record.
+          <p className="mt-8 max-w-[560px] text-[17px] leading-[1.75] text-[#F5F4F0]/70 md:text-[18px]">
+            Audio-only documentation captures less than half of what happens in a visual specialty clinic. Aurion applies multimodal clinical intelligence where observation, examination, and imaging are the core of the record.
           </p>
 
           {/* Specialty labels — horizontal strip */}
@@ -135,15 +135,15 @@ export default async function SolutionsPage() {
         </div>
       </section>
 
-      {/* ── The gap audio-only scribes leave ── */}
+      {/* ── The gap audio-only documentation leaves ── */}
       <section className="bg-card px-6 py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-[1100px]">
           <div className="grid gap-10 md:grid-cols-2 md:gap-16">
             <div className="border border-border/40 p-8">
-              <p className="mb-5 text-[9px] tracking-[0.3em] text-muted-foreground/40 uppercase">Audio-only scribes capture</p>
+              <p className="mb-5 text-[10px] tracking-[0.3em] text-muted-foreground/45 uppercase">Audio-only tools capture</p>
               <ul className="space-y-4">
                 {["What the clinician says", "What the patient says", "Some structured conversation elements"].map((item) => (
-                  <li key={item} className="flex items-start gap-4 text-[14px] text-foreground/40">
+                  <li key={item} className="flex items-start gap-4 text-[15px] text-foreground/45">
                     <span className="mt-[0.55em] block h-px w-4 shrink-0 bg-foreground/20" aria-hidden />
                     {item}
                   </li>
@@ -151,7 +151,7 @@ export default async function SolutionsPage() {
               </ul>
             </div>
             <div className="border border-accent/30 bg-[#0B1F3A]/[0.03] p-8">
-              <p className="mb-5 text-[9px] tracking-[0.3em] text-accent/70 uppercase">Aurion captures</p>
+              <p className="mb-5 text-[10px] tracking-[0.3em] text-accent/80 uppercase">Aurion captures</p>
               <ul className="space-y-4">
                 {[
                   "What the clinician says",
@@ -160,7 +160,7 @@ export default async function SolutionsPage() {
                   "What is reviewed on screen — imaging, labs, EMR",
                   "The full clinical reasoning, not just its verbal summary",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-4 text-[14px] text-foreground/85">
+                  <li key={item} className="flex items-start gap-4 text-[15px] text-foreground/90">
                     <span className="mt-[0.65em] block h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
                     {item}
                   </li>
@@ -171,7 +171,7 @@ export default async function SolutionsPage() {
         </div>
       </section>
 
-      {/* ── Comparison table — Aurion vs audio scribes ── */}
+      {/* ── Comparison — Aurion vs audio-only tools ── */}
       <ComparisonSection />
 
       {/* ── Specialty sections ── */}
@@ -191,10 +191,10 @@ export default async function SolutionsPage() {
                   {headline}
                 </h2>
                 <div className="mt-6 h-px w-10 bg-accent" />
-                <p className="mt-7 text-[15px] leading-[1.8] text-muted-foreground">{body}</p>
+                <p className="mt-7 text-[16px] leading-[1.8] text-muted-foreground">{body}</p>
                 <ul className="mt-8 space-y-3">
                   {bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-3 text-[13px] text-foreground/80">
+                    <li key={b} className="flex items-start gap-3 text-[14px] text-foreground/85">
                       <span className="mt-[0.6em] block h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
                       {b}
                     </li>

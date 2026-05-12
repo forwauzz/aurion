@@ -29,7 +29,7 @@
         "price": "0 $",
         "period": "/mois",
         "subtext": "Aucune carte de crédit requise",
-        "description": "Dictée audio + examen. Essayez VISION sans frais.",
+        "description": "Audio + notes d’examen structurées. Essayez Aurion sans frais.",
         "features": [
           { "text": "Transcription audio (illimitée)", "included": true },
           { "text": "Sortie structurée SOAP de base", "included": true },
@@ -49,7 +49,7 @@
         "period": "/mois",
         "annualPrice": "~49 $ USD",
         "annualNote": "facturation mensuelle",
-        "description": "Flux de dictée complet avec modèles spécialisés.",
+        "description": "Flux de documentation complet avec modèles spécialisés.",
         "sectionHeader": "Transcription visuelle de l’examen physique, de l’imagerie et d’autres examens ou comptes rendus",
         "features": [
           { "text": "Capture d’écran — radiographie, laboratoire, DME", "included": true },
